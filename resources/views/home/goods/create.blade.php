@@ -313,16 +313,17 @@
                                 <hr class="w80">
                                 <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-single-line-button">单行文本框</button>
 
-                                <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-multiple-line-button">单行文本框</button>
+                                <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-multiple-line-button">多行文本框</button>
                                 
                                 <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-radio-button">单选文本框</button>
                                 <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-checkbox-button">多选文本框</button>
-                             
+                                <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-single-image-button">单图片框</button>
+                                <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-multiple-image-button">多图片框</button>
                                 <button type="button" class="center-block btn btn-block btn-outline w90 mtn bg-gray js-file-button">上传文件框</button> 
                             </aside>
                         </div>
                     </div>
-                    <input type="hidden" name="id" value="">
+                    
                 </form>
                 <div class="ptv cl pbv prv">
                     <button class="mlv btn post_btn y btn_orange" type="" id="param-submit">确定</button>
@@ -605,7 +606,7 @@ $(function(){
             '<input type="hidden" name="input-type" value="single-line">'
             +'</label>'
 
-            +'<div class="w68 z"><input name="tip-'+num+'1" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none"></span></div>'
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none"></span></div>'
             +'<div class="w5 z txt-center remove-param">删除</div></div>');
     });
 
@@ -615,11 +616,9 @@ $(function(){
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
             +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  input-type="multiple-line" >'
-            +'<input type="hidden" name="input-type" value="multiple-line">'
-
+            +'<input type="hidden" name="input-type-'+num+'" value="multiple-line">'
             +'</label>'
-
-            +'<div class="w68 z"><input name="tip-'+num+'1" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none"></span></div>'
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none"></span></div>'
             +'<div class="w5 z txt-center remove-param">删除</div></div>');
     });
     // 单选按钮点击
@@ -629,20 +628,20 @@ $(function(){
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
             +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框">'
 
-            +'<input type="hidden" name="input-type" value="radio">'
+            +'<input type="hidden" name="input-type-'+num+'" value="radio">'
 
             +'</label>'
 
-            +'<div class="w68 z"><input name="tip-'+num+'1" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none">'+
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none">'+
                                                 '选项列表</span>'+
                                                 '<div class="choose-box">'+
                                                     '<div class=" flex-box  w45 mtm ">'+
-                                                        '<input name="param-name-1-param[]" class="p14" type="text">'+
+                                                        '<input name="param-name-'+num+'-param[]" class="p14" type="text">'+
                                                         '<i class="js-remove-param-param">删除</i>'+
                                                     '</div>'+
                                             
                                                     '<div class="mtm w30" style="cursor: pointer;">'+
-                                                        '<img src="'+'/s9/img/plus.png'+'">'+
+                                                        '<img data-rel="'+num+'" src="'+'/s9/img/plus.png'+'">'+
                                                     '</div>'+
 
                                                 '</div></div>'
@@ -655,25 +654,63 @@ $(function(){
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
             +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
-            +'<input type="hidden" name="input-type" value="checkbox">'
+            +'<input type="hidden" name="input-type-'+num+'" value="checkbox">'
 
             +'</label>'
 
-            +'<div class="w68 z"><input name="tip-'+num+'1" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none">'+
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none">'+
                                                 '选项列表</span>'+
                                                 '<div class="choose-box">'+
                                                     '<div class=" flex-box  w45 mtm ">'+
-                                                        '<input name="param-name-1-param[]" class="p14" type="text">'+
+                                                        '<input name="param-name-'+num+'-param[]" class="p14" type="text">'+
                                                         '<i class="js-remove-param-param">删除</i>'+
                                                     '</div>'+
                                             
                                                     '<div class="mtm w30" style="cursor: pointer;">'+
-                                                        '<img src="'+'/s9/img/plus.png'+'">'+
+                                                        '<img data-rel="'+num+'" src="'+'/s9/img/plus.png'+'">'+
                                                     '</div>'+
-
                                                 '</div></div>'
             +'<div class="w5 z txt-center remove-param">删除</div></div>');
     });
+
+    // 单图片文本框点击
+    $('.js-single-image-button').click(function(){
+        num++;
+        $('.user-define').append('<div class="cl apply-list-form mtv">'
+            +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
+            +'<input type="hidden" name="input-type-'+num+'" value="single-image">'
+            +'</label>'
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"></div>'
+            +'<div class="w5 z txt-center remove-param">删除</div></div>');
+    });
+
+    // 多图片文本框点击
+    $('.js-multiple-image-button').click(function(){
+        num++;
+        $('.user-define').append('<div class="cl apply-list-form mtv">'
+            +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
+            +'<input type="hidden" name="input-type-'+num+'" value="multiple-image">'
+            +'</label>'
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"></div>'
+            +'<div class="w5 z txt-center remove-param">删除</div></div>');
+    });
+
+
+ // 文件文本框点击
+    $('.js-file-button').click(function(){
+        num++;
+        $('.user-define').append('<div class="cl apply-list-form mtv">'
+            +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
+            +'<input type="hidden" name="input-type-'+num+'" value="file">'
+            +'</label>'
+            +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"></div>'
+            +'<div class="w5 z txt-center remove-param">删除</div></div>');
+    });
+
+
 
 
 
@@ -691,8 +728,9 @@ $(function(){
     //添加参数的参数
 
     $(document).on('click','.choose-box div img',function(){
- 
-        $(this).closest('div').before('<div class="flex-box  w45 mtm"><input  name="param-name-1-param[]" class=" p14" type="text"><i class="js-remove-param-param">删除</i>          </div>');
+        var rel =  $(this).attr('data-rel');
+
+        $(this).closest('div').before('<div class="flex-box  w45 mtm"><input  name="param-name-'+ rel +'-param[]" class=" p14" type="text"><i class="js-remove-param-param">删除</i></div>');
     });
 
   
