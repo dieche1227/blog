@@ -1,0 +1,289 @@
+/*竞赛首页样式*/
+
+/*最后块距离页脚距离58*/
+.pt58 { padding-bottom: 58px; }
+
+/*首页标题*/
+.htit { margin: 55px 0 35px; }
+.htit small {
+	font-family: Arial; font-size: 18px; color: rgba(46,62,80,.6);
+	height: 28px; line-height: 28px; font-weight: normal;vertical-align: middle;
+	margin-left: 20px; padding-left: 20px;
+	border-left: 2px solid #e67e22;
+}
+.htit  + .tips {
+	color: rgba(45,62,79,.6); margin-top: -25px; margin-bottom: 35px;
+}
+/*简易分页*/
+.h_page { display: table; margin: 0 auto; width: auto; height: 40px; }
+.h_page ul li { float: left; }
+.h_page ul li a { display: block; width: 40px; height: 40px; margin: 0 10px; border: 1px solid #bdc3c7; border-radius: 50%; font-size: 20px; color: #bdc3c7; text-align: center; line-height: 38px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+.h_page ul li a:hover,
+.h_page ul li a.on { color: #2d3e4f; border-color: #2d3e4f; }
+.h_page ul li:last-child a { line-height: 25px; }
+
+/*申请加入设计师、主办方*/
+.hjoin,
+.hstory {
+	padding-bottom: 58px;
+}
+.hjoin .item {
+	position: relative;
+	float: left; width: 460px; margin-left: 65px;
+}
+.hjoin .item + .item {
+	margin-left: 195px;
+}
+.hjoin strong {
+	font-size: 16px; line-height: 30px;
+	position: absolute; left: -65px; top: 0;
+}
+.hjoin .t1 {
+	font-size: 16px; line-height: 30px; min-height: 60px;
+}
+.hjoin .t2 {
+	margin-top: 10px; color: rgba(45,62,79,.7); min-height: 44px;
+
+}
+.hjoin .btn {
+	width: 195px; height: 58px; margin-top: 38px;
+	font-size: 18px; font-weight: bold; line-height: 58px;
+}
+/*设计师、主办方故事*/
+.hstory { }
+.hstory .info {
+	float: left; width: 630px; margin-right: 50px;
+}
+.hstory h3 {
+	position: relative;
+	margin: 36px 0 20px; padding-bottom: 14px;
+}
+.hstory h3:before {
+	content: ""; position: absolute; left: 0; bottom: 0;
+	width: 40px; height: 4px; background-color: #e67e22;
+}
+.hstory .text {
+	color: #333; line-height: 30px; margin-bottom: 10px; 
+}
+
+.hstory .btn {
+	width: 180px; height: 58px; margin-top: 30px;
+	font-size: 18px; font-weight: bold; line-height: 58px;
+}
+.hstory .adorn { width: 500px; height: 375px; float: right;}
+
+/*工作流程*/
+
+.hsteps {
+	margin-left: -170px;
+}
+.hsteps li {
+	margin-left: 170px; width: 280px; float: left; text-align: center;
+}
+.hsteps img {
+
+}
+.hsteps h3 {
+	margin-top: 48px;
+}
+.hsteps .text {
+	font-size: 18px; line-height: 28px; color: rgba(45,62,79,.6); margin-top: 22px;
+	max-height: 56px; overflow: hidden;
+}
+.hsteps + .btn {
+	margin: 50px auto; display: block;
+	width: 195px; height: 58px; line-height: 58px;
+	font-size: 18px; color: #fff; font-weight: bold;
+}
+/*正在进行的比赛*/
+.works_on {
+	position: relative; margin-left: -20px;
+}
+.works_on li {
+	position: relative;
+	float: left; width: 280px; margin-left: 20px; margin-bottom: 20px;
+}
+.works_on li:hover h4 a{
+	color: #2e81b7;;
+	text-decoration: underline;
+
+}
+.works_on .cover {
+	width: 280px; height: 210px; display: block;
+}
+.works_on .cover time {
+	position: absolute; top: 0; right: 0;
+	width: 155px; height: 50px; background-color: rgba(0,0,0,.7);
+	font-size: 14px; color: #fff; line-height: 50px; text-align: center;
+}
+.works_on .info {
+	width: 238px; height: 88px; border: 1px solid #eff3f5; 
+	padding: 15px 20px; 
+	border-top:none;
+}
+.works_on .info h4 a {
+	width: 238px; height: 28px;
+	// display: block; 
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+}
+.works_on .info .txt_half {
+	width: 238px; height: 22px;
+	display: block; 
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+
+}
+.works_on .author {
+	margin-top: 8px; height: 30px; line-height: 30px; width: 238px; overflow: hidden;
+}
+.works_on .avatar img {
+	width: 20px; height: 20px; margin: 5px 0;
+}
+.works_on .avatar .name {
+	font-size: 14px; vertical-align: middle;
+}
+
+
+
+/*已完成的比赛*/
+.works_done {
+	margin-left: -20px;
+}
+.works_done li {
+	position: relative;
+	float: left; width: 280px; margin-left: 20px; margin-bottom: 20px;
+}
+.works_done .cover {
+	position: relative; display: block;
+	width: 280px; height: 210px; 
+
+}
+.works_done .mask {
+	opacity: 0; visibility: hidden; transition: opacity .3s;
+	position: absolute; top: 0; bottom: 0; right: 0; left: 0;
+	background-color: rgba(230,126,34,.7); padding: 15px;
+}
+.works_done .mask .tit {
+	width: 248px; height: 178px;
+	border: 1px solid #fff;
+	font-size: 20px; color: #fff; text-align: center; line-height: 178px;
+}
+.works_done .cover:hover img {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	
+	filter: grayscale(100%);
+	
+	filter: gray;
+}
+.works_done .cover:hover .mask {
+	opacity: 1; visibility: visible;
+}
+.works_done .info {
+	height: 70px; line-height: 70px;
+}
+.works_done .info h4 {
+	width: 180px; height: 70px; line-height: 70px;
+}
+.works_done .info .avatar {
+	width: 100px; height: 70px; overflow: hidden;
+}
+.works_done .info .avatar img {
+	width: 24px; height: 24px;
+}
+.works_done .info .avatar .name {
+	margin-left: 10px; 
+	font-size: 14px; color: #e67e22; vertical-align: middle;
+	cursor: default;
+}
+
+
+/*往期回顾*/
+.hreview {
+	position: relative;
+}
+.hreview .first,
+.hreview .item  {
+	float: left;
+}
+.hreview .first {
+
+	width: 590px; height: 440px;
+}
+.hreview .first img {
+
+}
+.hreview .first_info {
+	position: absolute; top: 0; left: 0;
+	width: 295px; height: 220px; background-color: rgba(230,126,34,.7);
+	text-align: center;
+}
+.hreview .first_info .text {
+	color: rgba(255,255,255,.6); margin: 25px 0 10px;
+}
+.hreview .first_info h2 {
+	position: relative; color: #fff; 
+	padding-top: 8px;
+}
+.hreview .first_info h2:before {
+	content: ""; position: absolute; top: 0; left: 50%;
+	width: 40px; height: 2px; background-color: #fff; 
+	display: block; margin-left: -20px;
+}
+.hreview .first_info .btn {
+	margin-top: 24px; 
+	width: 195px; height: 58px; line-height: 58px;
+	color: #e67e22; font-size: 18px;
+}
+
+.hreview .item {
+	position: relative;
+	width: 295px; height: 220px;
+
+}
+.hreview .item img {
+
+}
+.hreview .item .info {
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+	padding: 0 30px;
+	background:-webkit-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(230,126,34,.6) );
+    background:   -moz-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(230,126,34,.6) );
+    background:    -ms-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(230,126,34,.6) );
+    background:     -o-linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(230,126,34,.6) );
+    background:        linear-gradient(top, rgba(0,0,0,.6), rgba(0,0,0,.6), rgba(230,126,34,.6) );
+
+    opacity: 0; visibility: hidden;
+	transition: opacity .3s;
+}
+.hreview .item .info .text {
+	float: left; width: 193px;
+	margin: 130px 0 10px; color: rgba(255,255,255,.6);
+}
+.hreview .item .info h4 {
+	position: relative; float: left;
+	padding-top: 12px; width: 193px; height: 28px; overflow: hidden;
+	color: #fff;
+}
+.hreview .item .info h4:before {
+	content: ""; position: absolute; top: 0; left: 0;
+	width: 40px; height: 2px; background-color: #fff; 
+	display: block;
+}
+.hreview .item .info i {
+	float: right; width: 40px; height: 40px; 
+	border: 1px solid #fff; border-radius: 50%;
+	font-size: 20px; color: #fff; line-height: 40px; text-align: center;
+}
+.hreview .item:hover .info {
+	opacity: 1;
+	visibility: visible;
+}

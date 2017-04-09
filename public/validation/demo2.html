@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery validation 验证插件 演示实例</title>
+<link rel="stylesheet" href="css/screen.css">
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_zh.js"></script>
+<script>
+	$.validator.setDefaults({
+		submitHandler: function() {
+			alert("submitted!");
+		}
+	});
+
+	$().ready(function() {
+		// validate signup form on keyup and submit
+		$("#signupForm").validate({
+			rules: {
+				firstname: "required",
+				lastname: "required",
+				username: {
+					required: true,
+					minlength: 2
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				confirm_password: {
+					required: true,
+					minlength: 5,
+					equalTo: "#password"
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				topic: {
+					required: "#newsletter:checked",
+					minlength: 2
+				},
+				agree: "required"
+			},
+			messages: {
+				firstname: "请输入您的名字",
+				lastname: "请输入您的姓氏",
+				username: {
+					required: "请输入您的账号",
+					minlength: "您的账号必须至少包含2个字符"
+				},
+				password: {
+					required: "请提供密码",
+					minlength: "您的密码必须至少为5个字符"
+				},
+				confirm_password: {
+					required: "请提供密码",
+					minlength: "您的密码必须至少为5个字符",
+					equalTo: "密码和确认密码不符"
+				},
+				email: "请输入有效的电子邮件地址",
+				agree: "请接受我们的协议"
+			}
+		});
+
+		// propose username by combining first- and lastname
+		$("#username").focus(function() {
+			var firstname = $("#firstname").val();
+			var lastname = $("#lastname").val();
+			if (firstname && lastname && !this.value) {
+				this.value = firstname + "." + lastname;
+			}
+		});
+
+		//code to hide topic selection, disable for demo
+		var newsletter = $("#newsletter");
+		// newsletter topics are optional, hide at first
+		var inital = newsletter.is(":checked");
+		var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
+		var topicInputs = topics.find("input").attr("disabled", !inital);
+		// show when newsletter is checked
+		newsletter.click(function() {
+			topics[this.checked ? "removeClass" : "addClass"]("gray");
+			topicInputs.attr("disabled", !this.checked);
+		});
+	});
+	</script>
+<style>
+  #signupForm{width:670px;}
+  #signupForm label.error{margin-left:10px;width:auto;display:inline;}
+  #newsletter_topics label.error{display:none;margin-left:103px;}
+</style>
+</head>
+<body>
+	<h2>jQuery validation 验证插件 演示实例</h2>
+  <div id="main">
+    <form class="cmxform" id="signupForm" method="get" action="">
+      <fieldset>
+        <legend>完整的表单验证</legend>
+        <p>
+          <label for="firstname">名字：</label>
+          <input id="firstname" name="firstname" type="text">
+        </p>
+        <p>
+          <label for="lastname">姓氏：</label>
+          <input id="lastname" name="lastname" type="text">
+        </p>
+        <p>
+          <label for="username">账号：</label>
+          <input id="username" name="username" type="text">
+        </p>
+        <p>
+          <label for="password">密码：</label>
+          <input id="password" name="password" type="password">
+        </p>
+        <p>
+          <label for="confirm_password">确认密码：</label>
+          <input id="confirm_password" name="confirm_password" type="password">
+        </p>
+        <p>
+          <label for="email">邮箱：</label>
+          <input id="email" name="email" type="email">
+        </p>
+        <p>
+          <label for="agree">同意我们的协议</label>
+          <input type="checkbox" class="checkbox" id="agree" name="agree">
+        </p>
+        <p>
+          <label for="newsletter">你希望收到的信息：</label>
+          <input type="checkbox" class="checkbox" id="newsletter" name="newsletter">
+        </p>
+        <fieldset id="newsletter_topics">
+          <legend>主题（至少选择两个） - 注意：当通讯未选择时，将被隐藏，但在演示中可见</legend>
+          <label for="topic_marketflash">
+            <input type="checkbox" id="topic_marketflash" value="marketflash" name="topic">市场快讯
+          </label>
+          <label for="topic_fuzz">
+            <input type="checkbox" id="topic_fuzz" value="fuzz" name="topic">最新的动态
+          </label>
+          <label for="topic_digester">
+            <input type="checkbox" id="topic_digester" value="digester" name="topic">邮件推送
+          </label>
+          <label for="topic" class="error">请至少选择两个您想要接收的主题。</label>
+        </fieldset>
+        <p>
+          <input class="submit" type="submit" value="Submit">
+        </p>
+      </fieldset>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,462 @@
+/*
+*  description:  注册登录忘记密码css
+*  require:      bootstrap.min.css reset.css
+*  relevancy:    none
+*  date:         2016-12-20
+*  update:       (2016-12-20 09:54)
+*/
+
+.cf-wrap{
+  width: 1180px;
+  /* padding: 0 10px 56px; */
+  padding-top:0px;
+  padding-left:10px;
+  padding-right:10px;
+  margin: -185px auto 0;
+  min-height:100%;
+  height:auto;
+}
+
+.cf-wrap .tlt{
+  font-size: 36px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: #4877ed;
+  width:636px;
+}
+.cf-confirm-wrap{
+  width: 636px;
+  height: 498px;
+  position: relative;
+ 
+  margin:0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.forgot-form{
+   height: 420px;
+}
+
+.form-wrap .form-hd{
+  height: 92px;
+}
+.form-wrap .form-hd dl{
+  float: left;
+  width: 212px;
+  margin-bottom: 0;
+  cursor: pointer;
+  text-align: center;
+  color: #666;
+  position: relative;
+  border-bottom: 1px solid #4f74b8;
+}
+.form-wrap .form-hd dl dt{
+  width: 78px;
+  display: inline-block;
+  border-bottom: 1px solid #666;
+  padding: 15px 0 6px 0;
+}
+.form-wrap .form-hd dl dt span{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 12px;
+  vertical-align: middle;
+  font-weight: normal;
+}
+.form-wrap .form-hd dl dt i{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+.form-wrap .form-hd dl dd.sub-tlt{
+  font-size: 16px;
+  line-height: 36px;
+  margin-bottom: 5px;
+}
+.form-wrap .form-hd dl img{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.form-wrap .form-hd dl.cur{
+  color: #fff;
+  background-color: #1446a0;
+}
+.form-wrap .form-hd dl.cur dt{
+  border-bottom-color: #fff;
+}
+.form-wrap .form-hd dl.cur .arrow{
+  position: absolute;
+  width: 16px;
+  height: 11px;
+  background:url('/img/arrow.png') no-repeat;
+  left: 50%;
+  margin-left: -8px;
+}
+/* 表单内容 */
+.form-wrap .form-bd{
+
+}
+.form-wrap .form-bd form{
+  width: 400px;
+  margin:0 auto;
+  margin-top: 14px;
+}
+.form-wrap .form-bd .tip {
+    position:absolute;
+    color: #e15554;
+    font-size: 12px;
+    background-color: #ebebeb;
+    width: 300px;
+    height: 26px;
+    line-height: 26px;
+    top:-42px;
+    left:196px;
+    border-radius: 4px;
+    padding-left:13px;
+}
+.mt53{
+  margin-top:53px;
+}
+.form-wrap .form-bd form .form-group{
+  margin-bottom: 24px;
+}
+
+.form-wrap .form-bd form .has-error{
+  margin-bottom: 0px;
+}
+.has-error .ipt .help-block{
+  margin-left:12px;
+  margin-top:2px;
+  margin-bottom:3px;
+  color:#e15554;
+}
+
+.has-error .yzm .help-block{
+  margin-left:12px;
+  margin-top:2px;
+  margin-bottom:3px;
+  color:#e15554;
+}
+
+.mt-10{
+  margin-top:-10px;
+}
+.pt-2{
+  padding-top:2px !important;
+}
+.has-error .form-control-feedback {
+    color: #e15554;
+   
+}
+.form-control-feedback {
+  top:6px;
+}
+ 
+
+.has-error .form-control {
+  border-color:#e15554;
+}
+.form-wrap .form-bd form .form-group>label{
+  width: 100px;
+  padding-right: 0;
+  margin-right: 21px;
+  margin-left: -27px;
+  line-height: 38px;
+  color: #666;
+  font-size: 16px;
+  font-weight:normal;
+}
+.form-wrap .form-bd form .form-group .ipt{
+  width: 314px;
+  padding-left: 0;
+}
+.form-wrap .form-bd form .form-group input[type="text"],
+.form-wrap .form-bd form .form-group input[type="password"]{
+  height: 46px;
+}
+.form-wrap .form-bd form .form-group .yzm{
+  padding-left: 0;
+  width: 188px;
+}
+.form-wrap .form-bd form .code-img{
+  float: left;
+}
+.form-wrap .form-bd .code-info{
+  float: left;
+  color: #999;
+  line-height: 20px;
+}
+.form-wrap .form-bd .next-btn{
+  padding: 0;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  margin-left: -13px;
+}
+
+/* 账户确认 */
+.account-form-bd .account{
+  margin-top: 10px;
+}
+.account-form-bd .account p{
+ font-size: 14px;
+}
+.account-form-bd .sms-btn{
+  float: left;
+  width: 110px;
+}
+.account-form-bd .sms-btn button{
+  width: 100%;
+  height: 46px;
+  text-align: center;
+ 
+  border:1px solid #4877ed;
+  padding: 0;
+}
+
+
+/* 注册 */
+
+.form-wrap .form-bd .account-btn{
+  padding: 0;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #c4477ed !important;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+.reg-tip {
+  position:absolute;
+  top:-28px;
+  left:-2px;
+  display:inline-block;
+    color: #e15554;
+    font-size: 12px;
+    background-color: #ebebeb;
+    width: 300px;
+    height: 26px;
+    line-height: 26px;
+    border-radius: 4px;
+    padding-left:13px;
+}
+
+
+
+.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
+    background-color: #337ab7;
+    border-color: #b2c6f7;
+}
+.reg-form-wrap{
+  height:480px;
+
+}
+.reg-form {
+  margin-top: 50px;
+  margin-left:60px;
+ }
+
+ .reg-wrap{
+  margin-top:-135px;
+ }
+
+.w328{
+  width:328px !important;
+ }
+
+.reg-divider{
+    height: 120px;
+    width: 1px;
+    border-left: 1px solid #e6e6e6;
+ }
+
+.reg-middle .or{
+  margin-left: -6px;
+ }
+
+.forward{
+  display: inline-block;
+  border-radius: 25px;
+  width:14px;
+  height: 14px;
+  background: url(/icon/right_arrow2.svg) no-repeat  center center;
+  background-size:12px 12px;
+  /*background-color:#B9C9F9;*/
+  vertical-align: middle;
+}
+
+.reg-aside{
+  margin-left: 37px;
+}
+
+.reg-aside p .btn{
+  padding-left: 0px;
+}
+.reg-aside .left-up{
+  width: 10px;
+  height: 20px;
+  border-left:1px solid #4877ED;
+  border-top:1px solid #4877ED;
+  border-right:none;
+  border-bottom: none;
+}
+.reg-aside img{
+  margin-left:25px;
+}
+.right-down{
+  width: 10px;
+  height: 20px;
+  border-right:1px solid #4877ED;
+  border-bottom:1px solid #4877ED;
+  border-left:none;
+  border-top: none;
+  margin-left: 141px;
+}
+.accept-formgroup i{
+  top:-7px;
+}
+/*登录页面*/
+.login-form{
+  height: 380px;
+}
+
+
+.account-padding{
+  /* background: url(/icon/account_gray.svg) no-repeat  0 center;
+  background-size:18px 18px;
+  background-position-x: 15px; */
+  vertical-align: middle;
+  padding-left:40px !important;
+}
+
+
+.icon-position{
+  position:absolute;
+  top:13px;
+  left:18px;
+  height:20px;
+  width:20px;
+  z-index:1;
+}
+/* .pass-icon{
+  background: url(/icon/password_gray.svg) no-repeat  0 center;
+  background-size:18px 18px;
+  background-position-x: 15px; 
+  vertical-align: middle;
+  padding-left:40px !important;
+} */
+
+/*注册成功页面*/
+  .bg-png{
+    height: 554px;
+    
+    background: url(/img/bg.png) no-repeat  center center;
+  }
+  /*.login-success {
+    width:600px;
+  }*/
+  .login-success h2{
+    padding-top: 60px;
+  }
+  .login-success .center-block .btn-link{
+    border:1px solid #fff;
+    border-radius: 4px;
+  }
+
+  .login-success .center-block .btn-default{
+    border-radius: 4px;
+    height: 37px;
+    padding-top:8px;
+    width: 160px;
+    margin: 0 auto;
+  }
+
+  .login-success p{
+    margin-bottom: 4px;
+  }
+  
+  .login-success .center-block .btn-link{
+    border-radius:4px;
+    height: 37px;
+    display: block;
+    padding-top:8px;
+    width: 160px;
+    margin: 0 auto;
+  } 
+  
+  .check{
+    display: inline-block;
+    border-radius: 25px;
+    width:50px;
+    height: 50px;
+    background: url(/img/mobile_register_ok.png) no-repeat center center;
+    background-size: 40px;
+    background-color:#ffffff;
+    vertical-align: middle;
+  }
+  h2 span{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  #sendcode:hover{
+  
+  }
+  
+  .non-dec:hover{
+  color:#3469ed !important;
+  text-decoration:none !important;
+}
+
+
+/* 表单 */
+
+/*页面选中时背景颜色*/
+::selection{
+  background:#4477ed !important;
+  color:#fff;
+}
+::-moz-selection{
+  background:#4477ed !important;
+  color:#fff;
+}
+
+
+.has-success .form-control {
+    border-color: #3bb273; 
+}
+
+
+.has-error .form-control {
+    border-color: #e15554; 
+}
+input[type="text"]:focus{
+  outline:0 !important;
+  
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 200px white inset !important;
+}
+
+#color-white{
+      color: #1a54e8;
+       background-color: #fff;
+}
+.code-img img{
+  width: 110px;
+  height: 46px;
+}
+
+.sms-btn btn{
+  background: blue;
+}

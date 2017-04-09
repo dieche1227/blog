@@ -1,0 +1,300 @@
+/* 20160304 */
+/* 竞赛角色选择   */
+.obox {
+	width: 1180px; margin: 50px auto; background-color: #fff;
+}
+.obox h5 {
+	width: 1180px; height: 60px; line-height: 60px;
+	background-color: #fafbfb;border: 1px solid rgba(189, 195, 199, 0.5); text-align: center;
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.login_sel {
+	width: 520px; margin: 0 auto; padding-bottom: 100px;
+}
+.login_sel h4 {
+	margin-bottom: 36px; margin-top: 90px;
+}
+.login_sel h4 span {
+	font-size: 14px; color: #e67e22; font-weight: normal;
+}
+.login_sel .iradio {
+	margin-bottom: 28px;
+}
+.login_sel .iradio p {
+	font-size: 16px; line-height: 20px;
+}
+.login_sel .iradio p span {
+	font-size: 14px; opacity: .5;
+}
+.login_sel .icheck {
+	display: block; width: 170px; margin: 80px auto 10px; 
+}
+.login_sel .icheck a {
+	font-size: 14px; color: #2e81b7; font-weight: bold; text-decoration: underline; 
+}
+.login_sel .btn {
+	width: 180px; height: 57px; line-height: 57px; display: block; margin: 0 auto;
+	font-size: 18px; font-weight: bold;
+}
+
+
+/* 系统通知  */
+.notice_list {
+	padding: 0 20px 20px;
+}
+.notice_list li {
+	width: 1080px; background-color: #f5f7f8; margin-top: 20px; padding: 15px 30px;
+}
+.notice_list .cont {
+	float: left; width: 980px;
+}
+.notice_list .cont h6 {
+	font-weight: normal; margin-bottom: 5px;
+}
+.notice_list .cont .link {
+
+}
+.notice_list .time {
+	float: right; width: 100px; font-size: 14px;
+}
+.notice_list .time strong {
+	margin-bottom: 5px; display: inline-block;
+}
+.notice_list .time span {
+	opacity: .5; font-weight: bold;
+}
+.notice_list + .more {
+	width: 100%; display: block; border-top: 1px solid #dee1e3; height: 75px; line-height: 75px; 
+	font-size: 14px; color: #abb0b4; text-align: center; 
+}
+.hyj_page{
+	 border-top: 1px solid #dee1e3; 
+	 overflow: hidden;
+	 padding-top: 20px; 
+}
+/* FAQ  */
+.faq_menu {
+	padding: 20px; width: 1140px;
+}
+.faq_menu > li {
+	margin-bottom: 20px;
+}
+.faq_menu > li .title {
+	position: relative; cursor: pointer;
+	height: 60px; line-height: 60px;
+	background-color: #f5f7f8; padding: 0 30px; 
+	font-size: 16px; color: #2c3e50; font-weight: bold;
+}
+.faq_menu > li .icon-down {
+	position: absolute; top: 20px; right: 30px; 
+	font-size: 22px; color: #2c3e50;
+	transition: all .2s;
+}
+.faq_menu > li.open .icon-down {
+	color: #e67e22; 
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.faq_submenu {
+	margin-top: 10px; background-color: #fafbfb; padding: 0 30px; width: 1080px;
+	max-height: 212px; overflow: hidden;
+}
+.faq_submenu.open {
+	// height: auto;
+}
+.faq_submenu > li {
+	height: 52px; line-height: 52px; border-bottom: 1px solid #f5f5f5;
+	font-size: 14px;
+}
+.faq_submenu > li a { color: #abb0b4; }
+.faq_submenu > li a:hover { color: #2c3e50; }
+.faq_submenu > li .num { color: #e54d42; margin-right: 5px; }
+.faq_submenu + .more {
+	font-size: 14px; color: #2e81b7; height: 52px; line-height: 52px; 
+	display: block; text-align: center; background-color: #fafbfb;
+}
+
+/* FAQ详情页 */	
+.faq_cont {
+	padding: 0 30px;
+}
+.faq_cont .ques {
+	height: 76px; line-height: 76px;
+	font-size: 16px; color: #2c3e50; font-weight: bold;
+	border-bottom: 1px solid #dee1e3; 
+}
+.faq_cont .ques .num {
+	color: #e54d42; 
+}
+.faq_cont .answ {
+	padding: 25px 0;
+}
+.faq_cont .answ .num {
+	float: left; font-size: 16px; color: #1abc9c;
+}
+.faq_cont .answ .text {
+	margin-left: 40px; margin-right: 20px;
+	font-size: 14px; color: #abb0b4; line-height: 22px; 
+}
+.faq_cont .answ .text p {
+	margin-bottom: 5px;
+}
+
+
+.hg_detail{
+    max-height:450px!important;  
+    overflow-y:auto;
+    padding-right: 20px;
+}
+.hg_detail p{
+    font-size:14px;
+    color: rgba(45,62,79,0.7);
+    line-height: 2;
+}
+.hg_detail .p1{
+    margin-bottom:10px;
+    line-height: 2;
+    font-size:14px;
+    color: rgba(45,62,79,0.7);
+}
+.hg_detail .p2{
+    text-indent: 2em;
+}
+.hg_detail h5{
+    margin: 30px 0 10px 0;
+}
+.hg_detail strong{
+	color: rgba(45,62,79,1);
+}
+.hg_detail .txt_d{
+	text-decoration: underline;
+}
+/*上传源文件*/
+		.hg_h4{
+			font-size: 18px;
+			text-align: center;
+			margin-top: 95px;
+			margin-bottom: 15px;
+		}
+		.hg_obox1{
+			font-size: 14px;
+			color: #e67e22;
+			text-align: center;
+		}
+		.hg_gdt{
+			width: 450px;
+			padding-bottom: 14px;
+			border-radius: 5px;
+			background-color: #fafbfb;
+			margin:50px auto;
+			overflow: hidden;
+			display: none;
+
+		}
+		.hg_gdt .hg_gdt_in{
+			width: 355px;
+			height: 68px;
+			margin: 22px auto 0;
+		}
+
+		.hg_gdt .hg_gdt_in  .hg_gdt_l {
+			width: 355px;
+			height: 17px;
+			border-radius: 10px;
+			background: #e5e7e9;
+			position: relative;
+		}
+		.hg_gdt_lb{
+			width: 300px;
+			height: 17px;
+			border-radius: 10px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: #cacfd2;
+		}
+		.hg_gdt_b{
+			margin-top: 25px;
+		}
+		.hg_gdt_bl{
+			font-size:14px;
+			color: #cacfd2;
+		}
+		.hg_gdt_r i{
+			display: block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			color: #fff;
+			background: #e67e22;
+			cursor: pointer;
+			border-radius: 50%;
+			font-size: 10px;
+		}
+		.hg_sel .btn_gray{ 
+			cursor: default;
+		}
+		.file_up{
+		    position: absolute;
+		    opacity: 0;
+		    width: 180px;
+		    height: 57px;
+		    top: 0;
+		    left: 0;			
+		}
+		#cancel{
+			width:20px;
+			height: 20px;
+			float: right;
+			border-radius: 50%;
+			background: #e67e22;
+			    position: absolute;
+			    right: -30px;
+			    top: -2px;
+			    text-align: center;
+		}
+		#cancel i{
+			color: #fff;
+			width:20px;
+			height: 20px;
+			line-height: 20px;
+			font-size: 12px;
+
+
+
+		}
+		.hg_cx{
+			height: 60px;
+			width: 390px;
+			margin:0 auto;
+			/*display: none;*/
+		}
+		.hg_cx1{
+			height: 60px;
+			width: 390px;
+			margin:0 auto;
+			display: none;
+		}
+		.hg_upl{
+			width: 180px;
+			height: 60px;
+			text-align: center;
+			line-height: 60px;
+			background: #c0c5ca;
+			color: rgba(255,255,255,0.7);
+			border-radius: 4px;
+
+		}
+		.hg_gre{
+			background: #3498db;
+			color: rgba(2555,255,255,1);
+		}
+		.hg_org{
+			background: #e67e22;
+			color: rgba(2555,255,255,1);
+		}

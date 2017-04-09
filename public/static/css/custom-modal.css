@@ -1,0 +1,62 @@
+.modal-custom{
+    width:450px;
+    background: #ffffff;
+}
+.modal-title{
+    font-size: 14px;
+    color:#ffffff;
+    line-height: 40px;
+    text-indent: 18px;
+    margin:0px;
+    background: #1446a0;
+    height:40px;
+    width:100%;
+}
+.modal-fl{
+float: left;
+}
+.modal-fr{
+    float: right;
+}
+.m-text input[type="radio"]{
+    margin-right:10px;
+}
+.time-input{
+    text-align: center;
+    float: inherit;
+    margin: 0px auto;
+    margin-top:20px;
+}
+.offline-input{
+    margin:0px auto;
+    text-align: center;
+    float: inherit;
+}
+.modal-text{
+    padding:32px 32px 0px 32px;
+    font-size:14px;
+}
+.m-prompt{
+    color:#1446a0;
+}
+.m-button{
+    padding:30px 32px 32px 32px;
+    text-align: center;
+}
+.m-button button{
+    border-radius: 4px;
+    width:80px;
+    font-size: 14px;
+    padding:3px 0px;
+}
+.m-b-recall{
+    margin-right: 27px;
+    color:#ffffff;
+    background: #1446a0;
+    border:1px solid #1446a0;
+}
+.m-b-cancel{
+    margin-left:27px;
+    background: #ffffff;
+    border:1px solid #cacaca;
+}

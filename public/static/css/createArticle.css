@@ -1,0 +1,161 @@
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.article-content {
+    padding: 30px 0 43px 0;
+}
+.content-manager {
+    width: 180px;
+    min-height: 100px;
+    background-color: #fff;
+}
+
+.content-input {
+    width: 970px;
+    min-height: 100px;
+    padding: 30px 40px 40px 40px;
+    background-color: #fff;
+}
+.article-input {
+    padding-bottom: 20px;
+}
+.article-input > label {
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-weight: 500;
+}
+.article-input > input {
+    width: 805px;
+    height: 30px;
+    border: 1px solid #9a9a9a;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+.article-input > textarea {
+    width: 805px;
+    height: 80px;
+    resize: none;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-top: 7px;
+}
+.article-input > label > span {
+    color: red;
+    padding-right: 3px;
+}
+#article_draft{
+	    background-color: #fff;
+    border: 1px solid #666;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    color: #666;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 60px;
+}
+#article_draft:hover{
+	 color: #1a54e8;
+    border: 1px solid #1a54e8;
+}
+.modify-summary > label {
+    vertical-align: top;
+    margin-top: 9px;
+}
+.modify-summary > p {
+    margin-right: 5px;
+    margin-top: 3px;
+}
+.modify-summary > p > span {
+    color: red;
+}
+.modify-type > select {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #9a9a9a;
+}
+.modify-stick > div {
+    display: inline-block;
+}
+.modify-stick > div > label {
+    position: relative;
+}
+.modify-stick > div > label > span {
+    padding-left: 10px;
+    color: #666;
+    font-weight: normal;
+}
+.modify-stick > div > label:nth-child(2) {
+    margin-left: 45px;
+}
+.modify-stick > div > label > input {
+    position: relative;
+    top: 2.5px;
+    left: 0;
+    right: 10px;
+}
+
+
+.modify-content > div {
+    display: inline-block;
+    width: 800px;
+    height: 440px;
+    background-color: #fafafa;
+}
+.modify-upload-attachment > div {
+    display: inline-block;
+}
+.modify-upload-attachment > div > input:nth-child(1){
+    background-color: #fff;
+    border: 1px solid #1a54e8;
+    width: 100px;
+    height: 30px;
+    color: #1a54e8;
+    border-radius: 5px;
+}
+.modify-upload-attachment > p {
+    display: inline-block;
+    margin-left: 20px;
+}
+.modify-upload-cover > label {
+    margin-left: -11px;
+}
+.modify-upload-cover > div {
+    display: inline-block;
+}
+.modify-upload-cover > div > input:nth-child(1){
+    background-color: #fff;
+    border: 1px solid #1a54e8;
+    width: 100px;
+    height: 30px;
+    color: #1a54e8;
+    border-radius: 5px;
+}
+.modify-action > a {
+    background-color: #fff;
+    border: 1px solid #666;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    color: #666;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 60px;
+}
+.modify-action > a:nth-child(1) {
+    margin-left: 240px;
+}
+.modify-action > a:hover {
+    color: #1a54e8;
+    border: 1px solid #1a54e8;
+}
+.modify-action > a:active {
+    color: #fff;
+    border: none;
+    background-color: #1a54e8;
+}

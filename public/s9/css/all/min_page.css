@@ -1,0 +1,19 @@
+
+/* 新的分页 */
+.min_page{height:40px;clear:both;display:table;margin:0 auto;}
+.min_page ul{height:40px;}
+.min_page li{min-width:40px;height:40px;line-height:40px;float:left;color: #555;margin-right: 10px;}
+.min_page li a{color: #99a1a7;font-style:normal;font-size:14px;height:40px;display:block;text-align:center;background: #e7ebee;border-radius:2px;}
+.min_page li a:hover{background:#bdc3c7;color:#555;color:#fff;transition: background-color 0.3s;}
+.min_page li a:hover i{color:#fff;}
+.min_page li a.on{background:#3498db;color:#fff;}
+.min_page li.form_page{width:60px;}
+.min_page li.form_page .page_input{height:40px;border:1px solid #ebeff3;border-radius:2px; height:38px;font-size:18px;width:48px;padding:0 5px; outline:none;background-color: transparent;}
+.min_page li.pt{min-width:20px;width:20px;}
+.min_page li.pt a{width:20px;background:none;}
+.min_page li.pt a:hover{color:#34495e;}
+.min_page li.next{width:40px}
+.min_page li.next a{text-align:center;}
+.min_page li.pre{width:40px;text-align:center;}
+.min_page li.pre i{display:block;text-align:center;width:40px;}
+.min_page li i{font-size:18px;height:40px;width:40px;line-height:40px;display:block;color:#99a1a7;float:right;text-align:center;}

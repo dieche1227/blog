@@ -1,0 +1,31 @@
+	
+	/*!
+ * description: 尾部css
+ * require: bootstrap.min.css reset.css
+ * relevancy: none
+ *
+ * date: 2016-12-16
+ * update: (2017-XX-XX XX:XX)
+ */
+
+.footer {
+    height: 148px;
+    overflow: hidden;
+}
+
+.logo-footer{
+	width: 72px;
+    height: 72px;
+    background: url(../../static/img/logo_bottom.png) no-repeat;
+}
+
+.weixin-footer{
+	width: 96px;
+    height: 96px;
+    background: url(../../static/img/footer_96_96.png) no-repeat;
+}
+.app-footer{
+	width: 96px;
+    height: 96px;
+    background: url(../../static/img/footer_96_96.png) no-repeat;
+}

@@ -1,0 +1,32 @@
+/*!
+ * description: 头部导航CSS
+ * require: bootstrap.min.css reset.css
+ * relevancy: none
+ *
+ * date: 2016-12-16
+ * update: (2017-XX-XX XX:XX)
+ */
+
+	.navbar-brand {
+		display:block;
+	    width: 238px;
+	    height: 47px;
+	    background: url(/img/logo_top.png) no-repeat;
+	}
+	.navbar{
+		background: #fff;
+		height: 61px;
+		border:0;
+		align-items:center;/*//子元素垂直居中*/
+		display:-webkit-flex;
+	}
+	/*.divider{
+	    height: 28px;
+	    width: 1px;
+	    border-left: 2px solid #6A7B85;
+	}*/
+
+	.navbar-nav li a {
+
+		color:#666;
+	}

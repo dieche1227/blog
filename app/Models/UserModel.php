@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class UserModel extends Model
+{
+    protected $table = 'data_user';
+    protected $dateFormat = 'U';
+    protected $guarded = ['id'];
+}

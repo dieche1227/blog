@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery validation 验证插件 演示实例</title>
+<link rel="stylesheet" href="css/screen.css">
+<script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_zh.js"></script>
+<script>
+	$.validator.setDefaults({
+		submitHandler: function() {
+			alert("submitted!");
+		}
+	});
+
+	$().ready(function() {
+		// validate the comment form when it is submitted
+		$("#commentForm").validate();
+	});
+	</script>
+<style>
+  #commentForm{width:500px;}
+  #commentForm label{width:250px;}
+  #commentForm label.error,#commentForm input.submit{margin-left:253px;}
+</style>
+</head>
+<body>
+	<h2>jQuery validation 验证插件 演示实例</h2>
+	<p>   默认submit Handler设置为向提交表单显示警报</p><br/>
+  <div id="main">
+
+    <form class="cmxform" id="commentForm" method="get" action="">
+      <fieldset>
+        <legend>请提供您的姓名，电子邮件,url地址（不会被公开）和评论</legend>
+        <p>
+          <label for="cname">姓名 (必需，至少2个字符)</label>
+          <input id="cname" value="" name="name" maxlength="10" minlength="2" type="text" required>
+        </p>
+        <p>
+          <label for="cemail">邮箱 (必须)</label>
+          <input id="cemail" type="email" name="email" required>
+        </p>
+        <p>
+          <label for="curl">URL (可选的)</label>
+          <input id="curl" type="url" name="url">
+        </p>
+				<p>
+          <label for="curl">年龄 (可选的)</label>
+          <input id="cage" type="number" max="99" min="10" name="age">
+        </p>
+        <p>
+          <label for="ccomment">你的评论 (必须)</label>
+          <textarea id="ccomment" name="comment" required></textarea>
+        </p>
+        <p>
+          <input class="submit" type="submit" value="Submit">
+        </p>
+      </fieldset>
+    </form>
+</div>
+</body>
+</html>

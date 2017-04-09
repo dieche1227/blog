@@ -1,0 +1,80 @@
+.bg-blue{background:url('../../static/img/loginbg.png') #1d5a79 top center no-repeat;}
+/*.pos-f{position: fixed;bottom: 0;left: 0}*/
+.pad-top{padding-top: 85px}
+.pad-top112{
+    padding-top: 138px;
+}
+.pad-bottom{padding-bottom: 95px;}
+.pad-20{padding: 20px 0}
+.pad-60{padding: 60px 0}
+.pad-18-60{
+    padding: 18px 0px 60px 0px;
+}
+/*login*/
+.login{width: 425px;margin: 0 auto;position: relative;}
+.border-r-4{border-radius: 4px}
+.bg-w{background-color: #fff}
+.login-div{
+    margin:0px;
+    margin-left:63px;
+    margin-right:63px;
+}
+.login-input{
+    position: relative;
+    padding:0px;
+}
+.login-people{
+    display: inline-block;
+    position:absolute;
+    width:20px;
+    height:20px;
+    left:16px;
+    top:12px;
+    color:#b3b3b3;
+    background:url(../icon/account-gray.svg) no-repeat;
+}
+.login-account{
+    padding:6px 12px 6px 48px;
+}
+.login-password{
+    padding:6px 12px 6px 48px;
+}
+.login-lock{
+    display: inline-block;
+    position:absolute;
+    width:20px;
+    height:20px;
+    left:16px;
+    top:12px;
+    background:url(../icon/padlock.svg) no-repeat;
+}
+.login-error{
+    border-radius: 3px;
+    text-indent: 12px;
+    padding:3px 0px;
+    margin-bottom: 12px;
+    display: inline-block;
+    width:100%;
+    font-size:12px;
+    color:#e15554;
+    background: #ebebeb;
+}
+.login-div input{
+    margin-bottom: 25px;
+    height:45px;
+}
+.admin-login{
+    border:none;
+    background: #b2c6f7;
+    font-size:16px;
+    color:#ffffff;
+    height:50px;
+}
+.login-title2{
+    font-size: 40px;
+    color:#ffff99;
+}
+.login-title3{
+    font-size: 50px;
+    color:#ffffff;
+ }

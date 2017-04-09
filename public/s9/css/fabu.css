@@ -1,0 +1,660 @@
+/*!
+ * description: 竞赛发布
+ * require: common.css
+ * relevancy: XXX.js
+ *
+ * date: 2015-XX-XX 
+ * update: (2015-XX-XX XX:XX)
+ */
+.warn_og { font-size: 12px; color: #e67e22; }
+
+/*发布_选择分类*/
+.bg_fabu { width: 100%; height: 100%; background: url("../img/bg_fabu.png") no-repeat center center;
+	background-size: cover;
+}
+.fabu_sort { margin: 50px 0 50px -20px; }
+.fabu_sort .item { position: relative; float: left; margin-left: 20px; margin-bottom: 20px;
+	width: 160px; height: 280px; padding: 0 60px;
+	background-color: #fff; border-radius: 10px;
+	text-align: center;
+}
+.fabu_sort a { display: block; color: #2d3e4f;}
+.fabu_sort .item > a > i,
+.fabu_sort .item > div > i { display: block; width: 160px; font-size: 80px; margin: 30px 0 25px; color: #e67e22;}
+/*.fabu_sort li .price { font-size: 16px; color: #e67e22; }*/
+.fabu_sort .item .ribbon { position: absolute; top: 10px; right: -5px; 
+	background: url("../img/ribbon.svg") no-repeat center center; background-size: 75px;
+	width: 65px; height: 38px; 
+	font-size: 12px; color: #fff; text-indent: 13px; line-height: 30px;
+}
+.fabu_sort .item:nth-child(5),
+.fabu_sort .item:nth-child(6),
+.fabu_sort .item:nth-child(7),
+.fabu_sort .item:nth-child(8) { margin-bottom: 50px; }
+
+.fabu_sort .item.other { width: 490px; height: 230px; padding: 50px 50px 0 40px; }
+.fabu_sort .item.other .y { width: 300px; margin-left: 30px; }
+.fabu_sort .item.other .tit { margin-top: 15px; text-align: left; }
+.fabu_sort .item.other .list { margin-left: -40px; margin-top: 20px;}
+.fabu_sort .item.other .list li { margin-left: 40px; margin-bottom: 20px; float: left; }
+.fabu_sort .item.other .list li a { display: block; width: 130px; height: 30px; line-height: 30px; }
+.fabu_sort .item.other .list li a i { float: left; width: 30px; height: 30px; line-height: 30px; 
+	font-size: 30px; color: #e67e22; margin-right: 20px;}
+.fabu_sort .item.other .list li a span { float: left; font-size: 14px; text-align: left; }
+
+/*发布_头图*/
+.fabu_banner { background: url("../img/fabu_banner.jpg") no-repeat center center; width: 100%; height: 200px; }
+
+.fabu_hd {
+	width: ;
+	padding: 45px 0 50px; 
+	text-align: center;
+}
+
+/*发布-步骤条*/
+.fabu_steps {
+	margin-top: 40px;
+	margin-left: -11px;
+}
+.fabu_steps li {
+	float: left;
+	width: 386px;
+	margin-left: 11px;
+}
+.fabu_steps li  a{
+	cursor: default;
+}
+.fabu_steps li.on a{
+	cursor: pointer;
+}
+.fabu_steps .item {
+	margin-bottom: 10px;
+	color: #cacfd2;
+	text-align: left;
+	text-indent: 2px;
+}
+.fabu_steps .bar {
+	display: block;
+	height: 16px;
+	background-color: #cacfd2;
+}
+.fabu_steps li:first-child .bar {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.fabu_steps li:last-child .bar {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.fabu_steps li.on .item {
+	color: #e67e22;
+}
+.fabu_steps li.on .bar {
+	background-color: #e67e22;
+}
+
+/*发布-下一步*/
+.fabu_ft_top {
+	border-top: 1px solid #bdc3c7;
+}
+.fabu_ft {
+	height: 60px; 
+	line-height: 60px;
+	padding: 30px 0;
+}
+.fabu_ft .info {
+
+}  
+.fabu_ft .info p { margin-top: 15px; font-size: 20px; color: #979da4; } 
+.fabu_ft .info p span { color: #2c3e50; } 
+.fabu_ft .info .warn_og { display: block; line-height: 10px; }     
+.fabu_ft .num_bar {
+	position: relative;
+	margin: 24px 0 0 100px;
+	width: 300px;
+	height: 15px;
+	background-color: #bfc5ca;
+	border-radius: 20px; 
+}
+.fabu_ft .num_bar:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom:0;
+	left: 0;
+	background-color: #2c3e50;  
+	width: 33%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px; 
+}
+.fabu_ft .btn {
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+}
+.fabu_ft .btn.btn_nature {
+	font-weight: bold;
+	color: #2e81b7;
+}
+.fabu_ft .btn.btn_orange {
+	width: 180px;
+	color: #fff;
+}
+
+/*发布-视觉风格*/
+.fabu_list {
+	margin: 50px 0 15px -33px;
+}
+.fabu_list li {
+	position: relative;
+	float: left;
+	margin-left: 33px;
+	margin-bottom: 33px;
+	width: 270px;
+	height: auto;
+	transition: box-shadow .2s;
+	
+}
+.fabu_list li:hover .cover {
+	box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+.fabu_list li .cover {
+	position: relative;
+	display: block;
+	height: 270px;
+}
+.fabu_list li .cover img {
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.fabu_list li .cover i {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	width: 50px;
+	height: 50px;
+	background-color: #000;
+	opacity: .5;
+	filter:alpha(opacity=50);
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+}
+.fabu_list li .name { font-size: 18px; line-height: 20px; margin-top: 20px; }
+.fabu_list li.on .cover img {
+	border: 5px solid #e67e22;
+}
+.fabu_list li.on .cover i {
+	background-color: #e67e22;
+	border-radius: 50%;
+	opacity: 1;
+	filter:alpha(opacity=100);
+}
+
+/*发布-视觉风格-特殊色值输入*/
+.fabu_more_col {
+	border: 1px solid #bdc3c7; 
+	width: 1178px;
+	/*height: 80px;*/
+	background-color: #fff;
+	margin-bottom: 50px;
+}
+.fabu_more_col.disabled .tit {
+	opacity: 
+}
+.fabu_more_col .tit {
+	height: 80px; 
+	line-height: 80px;
+}
+.fabu_more_col .tit h3 {
+	display: inline-block;
+	text-indent: 30px;
+}
+.fabu_more_col .tit i {
+	float: right;
+	font-size: 26px;
+	line-height: 80px;
+	margin-right: 30px;
+}
+.fabu_more_col textarea {
+	/*display: none;*/
+	border-top: 1px solid #dee1e3;
+	width: 1118px;
+	height: 160px;
+	padding: 20px 30px; 
+}
+
+/*发布表单
+fabu_fbox1    竞赛内容填写
+fabu_fbox2    竞赛类型选择
+fabu_fbox3    结算支付
+*/
+.fbox {
+	border-top: 1px solid #bdc3c7;
+	padding: 40px 0;
+}
+.fbox:first-child {
+	border-top: none;
+}
+.fbox_first{
+	border-top: none!important;
+}
+.fabu_fbox2 .fbox {
+	padding: 50px 0 20px;
+}
+
+.fabu_fbox legend{
+	font-size: 24px;
+	color: #2d3e4f;
+	font-weight: bold;
+	line-height: 60px;
+}
+.fbox > h2{
+	height: 60px;
+	font-size: 24px;
+	color: #2d3e4f;
+
+}
+.fabu_fbox2 legend { line-height: inherit; }
+.fabu_fbox legend.block {
+	float: left;
+	width: 100%;
+	margin-top: -3px;
+	margin-bottom: 30px;
+}
+.fabu_fbox2 legend .help {
+	display: inline-block; margin-left: 18px; padding: 0;
+	width: 20px; height: 20px; border-radius: 50%; background-color: #e67e22;
+	font-size: 14px; color: #fff; font-weight: bold; text-align: center;
+}
+.fabu_fbox .w800 {
+
+}
+
+.fabu_fbox1 .form_group {
+	margin-bottom: 17px; 
+}
+.fabu_fbox2 .form_group {
+	width: 100%;
+	border: 1px solid #bdc3c7;
+	padding: 20px 30px;
+	background-color: #fff;
+	margin-bottom: 30px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+.fabu_fbox .control_label .tit {
+	font-size: 20px; 
+}
+.fabu_fbox textarea.control_input {
+	height: 200px;
+}
+.control_label > .must {
+	color: #be3a31; 
+	font-size: 24px;
+	line-height: 20px;
+	vertical-align: sub;
+}
+.fabu_fbox .control_tip {
+	margin-left: 30px;
+	margin-top: 7px;
+	font-size: 14px;
+	color: #2d3e4f;
+	opacity: .5;
+	filter:alpha(opacity=50);
+	text-indent: -30px; 
+	width: 760px;
+}
+.fabu_fbox .control_limit {
+	font-size: 14px;
+	color: #2d3e4f;
+	opacity: .5;
+	filter:alpha(opacity=50);
+	line-height: 30px;
+	float: right;
+}
+
+/*详情页公用样式*/
+.fbox .text {
+	line-height: 26px; margin-bottom: 8px;
+	opacity: 0.7; filter:alpha(opacity=70);
+}
+.fbox h3 {
+	margin: 30px 0 10px;
+}
+.fbox .w800 h3:first-child {
+	margin-top: 12px;
+}
+.fbox .textbox {
+	width: 100%; height: 60px; padding: 0 20px;
+	color: #a5abb0; line-height: 60px; 
+	background-color: #f6f8f8; border: 1px solid #d4d9dc;
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-user-select: none;   /*禁止选择文字*/
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.fbox .down {
+	display: inline-block;
+	width: 100px; height: 40px; line-height: 40px; font-size: 14px; text-align: center;
+	border: 1px solid #bdc3c7; box-shadow: 0 0 5px rgba(0,0,0,.2);
+	background-color: #fff; border-radius: 5px;
+	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.fbox .name {
+	font-size: 16px; font-weight: bold; margin-left: 40px;line-height: 40px;
+}
+
+/*选择分类*/
+// .sel_box_fabu .sel_option { height: 300px; }
+
+/*发布表单-上传文件*/
+.fabu_upfile { width: 800px; height: 40px; line-height: 40px; }
+.fabu_upfile .upfile_box { position: relative; float: left; margin-right: 50px; width: 100px; height: 40px;}
+.fabu_upfile .upfile_box input[type="file"] {
+	position: absolute;
+	width: 100px;
+	height: 40px;
+	opacity: 0;
+	z-index: 1;
+}
+.fabu_upfile .upfile_btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px; height: 40px; line-height: 38px; text-align: center;
+	border: 1px solid #bdc3c7; 
+	box-shadow: 0 0 5px rgba(0,0,0,.2); 
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #2d3e4f;
+	background-color: #fff;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.fabu_upfile .upfile_bar {
+	position: absolute; left: 0; bottom: 0;
+	width: 0%; height: 2px; 
+	background-color: #e67e22; 
+	border-bottom-left-radius: 5px;
+}
+
+.fabu_upfile .upfile_show {
+	float: left; max-width: 650px;
+}
+.fabu_upfile .upfile_show .name {
+	float: left; max-width: 500px;
+	font-size: 16px; color: #2d3e4f; line-height: 40px;
+}
+.fabu_upfile .upfile_show .del {
+	margin-left: 20px;
+	font-size: 14px; color: #e67e22;
+	float: left; display: inline-block;
+}
+
+
+/*竞赛类型*/
+.sel_bisai .icon-youxuan,.sel_bisai .icon-dabiao {
+	margin-right: 30px; width: 44px; height: 44px; 
+	font-size: 26px; color: #6b7884; text-align: center; line-height: 44px;
+	border: 3px solid #6b7884; border-radius: 50%; 
+}
+.sel_bisai .icheck {
+	height: 20px; line-height: 20px; 
+}
+.sel_bisai .intro {
+	font-size: 14px; color: rgba(45,62,79,.5); text-indent: 30px; 
+}
+	/*需要份数*/
+.sel_bisai .fenshu {
+	display: none;
+	clear: both; position: relative;
+	 height: 30px; line-height: 30px;
+
+	width:740px;
+	border-top: 1px solid #dee1e3;
+	padding: 20px 30px;
+}
+/*.sel_bisai .fenshu:before {
+	content: ""; display: block;
+	position: absolute; top: 20px; left: -30px; right: -30px;
+	border-top: 1px solid #dee1e3;
+}*/
+.sel_bisai .fenshu p {
+	 color: rgba(45,62,79,.5);
+}
+
+/*套餐选择*/
+.fabu_taocan {
+	margin-left: -20px; margin-bottom: 20px;
+}
+.fabu_taocan .item {
+	float: left; width: 280px; height: 455px; overflow: hidden; margin-left: 20px; border: 1px solid #bdc3c7; text-align: center;
+	background-color: #fff;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;  
+	transition: all .2s;
+}
+.fabu_taocan .item:hover {
+    box-shadow: 0 0 30px rgba(0,0,0,.3);
+}
+.fabu_taocan .item .tit {
+	width: 100%; height: 100px; line-height: 100px; color: #fff; font-weight: normal;
+}
+.fabu_taocan .item:nth-child(1) .tit { background-color: #78887d; }
+.fabu_taocan .item:nth-child(2) .tit { background-color: #afbbc7; }
+.fabu_taocan .item:nth-child(3) .tit { background-color: #eca42a; }
+.fabu_taocan .item:nth-child(4) .tit { background-color: #e67e22; }
+.fabu_taocan .item .price {
+	display: block; margin: 25px 0 20px; font-size: 40px;
+}
+.fabu_taocan .item .intro {
+	margin-bottom: 25px; width: 100%; font-size: 20px;
+}
+.fabu_taocan .item .sublist {
+	height: 90px;
+}
+.fabu_taocan .item .sublist li {
+	height: 30px; line-height: 30px; text-align: left; font-size: 14px;
+}
+.fabu_taocan .item .sublist li i {
+	margin: 0 25px 0 40px; color: #2d3e4f;
+}
+.fabu_taocan .item .btn {
+	margin-top: 10px; width: 180px; height: 60px; font-size: 18px; line-height: 60px; color: rgba(45,62,79,.5);;
+	border: 1px solid #bdc3c7;
+}
+.fabu_taocan .select .btn,
+.fabu_taocan .item .btn.on {
+	background-color: #e67e22; color: #fff; border-color: #e67e22;
+}
+.fabu_taocan .item .btn:hover {
+	border-color: #e67e22; color: #e67e22;
+}
+.fabu_taocan .select .btn:hover,
+.fabu_taocan .item .btn.on:hover {
+	color: #fff;
+}
+
+/*自定义*/
+.dropdown_fabu {
+	border: 1px solid #bdc3c7; 
+	width: 1178px;
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+.dropdown_fabu .icheck {
+	height: 30px; line-height: 30px; vertical-align: middle; margin-left: 30px;margin-top: 3px;
+}
+.dropdown_fabu .dropdown_tit {
+	display: block; height: 80px; line-height: 80px;
+}
+.dropdown_fabu .dropdown_tit .h3 {
+	display: inline-block;
+}
+.dropdown_fabu .dropdown_tit .icon-down {
+	float: right; font-size: 26px; line-height: 80px; margin-right: 30px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+.dropdown_fabu .dropdown_tit .icon-down.on {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	color: #e67e22;
+}
+.dropdown_fabu .dropdown_box {
+	display: none; 
+    border-top: 1px solid #dee1e3;
+    padding: 25px 30px; height: 30px; line-height: 30px;
+}
+
+.dropdown_fabu .dropdown_box .z { font-size: 14px; color: rgba(45,62,79,.5); line-height: 30px;}
+.dropdown_fabu .dropdown_box .input_mini { width: 70px; }
+
+
+
+/*其他服务*/
+.fuwu_tit { height: 40px; line-height: 40px; margin-bottom: 5px; }
+.fuwu_tit h3 { float: left; }
+.fuwu_tit strong { float: right; font-size: 24px; color: #e67e22;}
+
+.fuwu_list li {padding: 15px 0; height: 20px; line-height: 20px; }
+.fuwu_list li .price {font-size: 18px; }
+.fuwu_list li .price.disabled { color: #abb0b4; }
+.fuwu_list li .price.line_through { color: #abb0b4; text-decoration: line-through; }
+
+/*费用清单*/
+.fabu_cost {
+
+}
+.fabu_cost .tit {
+	font-weight: normal; line-height: 60px;
+}
+.fabu_cost_list {
+
+}
+.fabu_cost_list dt,
+.fabu_cost_list dd {
+	height: 35px;
+	line-height: 35px;
+}
+.fabu_cost_list dt {
+	float: left; width: 600px;
+	font-size: 16px; color: rgba(45,62,79,.6);
+}
+.fabu_cost_list dt strong {
+	color: #2d3e4f; margin-left: 5px; 
+}
+.fabu_cost_list dd {
+	float: right; width: 200px;
+	font-size: 16px; color: #2d3e4f; text-align: right;
+}
+.fabu_cost .total {
+	border-top: 1px dashed #bdc3c7; margin-top: 20px; padding-top: 20px;
+	height: 50px; line-height: 50px; font-size: 16px;
+}
+.fabu_cost .total .price {
+	float: right; 
+	font-size: 24px; color: #e67e22;
+}
+/*支付方式*/
+.fabu_pay {
+
+}
+.fabu_pay .iradio {
+	margin: 20px 100px 20px 0;
+	float: left;
+
+}
+.fabu_pay .iradio .tip {
+	color: #9fa6ac; font-weight: normal;
+}
+.fabu_pay_bank {
+	margin: 10px 0 10px -20px;
+}
+.fabu_pay_bank li {
+	float: left; width: 185px; height: 70px; margin-left: 20px; margin-bottom: 20px;
+	border: 1px solid #bdc3c7; border-radius: 5px; 
+	background-color: #fff; padding: 10px 20px; cursor: pointer;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.fabu_pay_bank li.on {
+	border-color: #e67e22; 
+}
+.fabu_pay_bank li img {
+	width: 100%;
+	height: auto;
+}
+.fubu_paytip {
+	clear: both;
+	border-top: 1px dashed #bdc3c7; padding-top: 30px;
+}
+.fubu_paytip p {
+	position: relative;
+	margin-left: 28px; margin-bottom: 15px;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	
+}
+.fubu_paytip span {
+	position: absolute; top: 6px; left: -28px;
+	display: inline-block;
+	width: 10px; height: 10px; background-color: #6b7884; border-radius: 50%;
+}
+
+/*发布完成-成功-失败*/
+.fabu_status {
+	margin: 100px auto;
+}
+.fabu_status.danger {
+	background: url("../img/fabu_dang.png") no-repeat left 5px; min-height: 90px; width: 550px;
+}
+.fabu_status.success {
+	background: url("../img/fabu_succ.png") no-repeat left 5px; min-height: 90px; width: 420px;
+}
+.fabu_status.error {
+	background: url("../img/fabu_error.png") no-repeat left 5px; min-height: 90px; width: 420px;
+}
+.fabu_status .info {
+	margin-left: 120px;
+}
+.fabu_status .txt {
+	font-size: 18px; line-height: 32px; 
+}
+.fabu_status .info .txt a {
+	margin: 0 5px;
+	color: #2e81b7; text-decoration: underline; font-weight: bold; 
+}
+
+
+
+
+
+
+
+
+
+

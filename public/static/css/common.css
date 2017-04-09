@@ -1,0 +1,160 @@
+/*header头部的基本设置*/
+.pr0{
+    padding-right: 0px;
+}
+.pl0{
+    padding-left: 0px;
+}
+.nav-logo{
+    margin-top:-2px;
+}
+.header {
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom:1px solid #e2e2e2;
+    background-color: #f2f2f2;
+    height: 63px;
+}
+.header-middle a:hover {
+    color:#4877ed;
+}
+/*header头部中部导航菜单*/
+.header-middle {
+    line-height: 50px;
+}
+.header-middle a {
+    color:#333;
+    font-size : 18px;
+    margin-left:10px;
+    margin-right:10px;
+    padding-left: 10px;
+    height: 100%;
+    display: inline-block;
+    padding: 0px;
+}
+/*伪状态颜色*/
+.username:hover, .userpic {
+    color:#4877ed;
+}
+.logout:hover {
+    color:#FF5151;
+}
+/*header头部右侧个人信息菜单及间距*/
+.header-right {
+    padding-top: 10px;
+}
+.header-right a{
+    color : #000;
+}
+.userpic, .username, .header-space, .logout{
+    margin-left : 10px;
+}
+/*下拉菜单选项*/
+.drop-hover {
+    position: relative;
+}
+.drop-menu {
+    position: absolute;
+    left:160px;
+    top:52px;
+    padding:10px 5px;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    border:1px solid #e2e2e2;
+    z-index:999;
+}
+.drop-menu p {
+    background:url('../icon/icon.jpg') 8px center no-repeat;
+    margin: 0;
+    line-height:32px;
+}
+.drop-menu p.p1{
+   background:url('../icon/icon-two.jpg') 8px center no-repeat;
+}
+.drop-menu a {
+    color : #666;
+}
+.drop-menu img,.drop-menu a{
+    font-size:16px;
+    padding-right:3px;
+    padding-left:25px;
+}
+/*灰色三角形和白色三角形，合力构造下拉菜单三角线*/
+.triangle {
+    position: absolute;
+    top : -20px;
+    left:48px;
+    width:10px;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-top:10px solid transparent;
+    border-bottom:10px solid #e2e2e2;
+}
+.triangle-white {
+    position: absolute;
+    top : -19px;
+    left:48px;
+    width:10px;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-top:10px solid transparent;
+    border-bottom:10px solid #f2f2f2;
+}
+
+/*页脚基本设置*/
+.footer {
+    width:100%;
+    height: 150px;
+    background-color: #333;
+    margin-top: 60px;
+}
+/*左侧网站logo定位设置*/
+.logo {
+    height: 150px;
+    line-height: 150px;
+    display: inline-block;
+}
+
+/*logo右侧基本信息设置*/
+.content {
+    height: 150px;
+    display: block;
+    padding: 39px 0 0 30px;
+}
+.content p {
+    color : #ccc;
+}
+.content a {
+    color : #fff;
+}
+.footer-space {
+    margin : 0 18px;
+}
+/*右侧公众号基本设置*/
+.footer-logo {
+    display: inline-block;
+    padding: 18px 0px 0px 20px;
+    color : #fff;
+}
+
+
+.content p .foot-space{
+    color:#666;
+}
+.f14{
+    font-size:14px;
+}
+.mr100{
+    margin-right: 100px;
+}
+.mt14{
+    margin-top: 14px;
+}
+
+/*文字对齐方式*/
+.text-l{text-align: left}
+.text-c{text-align: center}
+.text-r{text-align: right}
+
+
+

@@ -1,0 +1,47 @@
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.page-title-bar {
+    padding: 0;
+    height: 130px;
+    background-color: green;
+    position: relative;
+}
+.page-title-bar > h2 {
+    color: #fff;
+    font-size: 22px;
+    position: absolute;
+    left: 170px;
+    top: 34px;
+    z-index: 999;
+}
+.competition-dynamic {
+    padding-top: 30px;
+}
+.dynamic-content {
+    width: 920px;
+    color: #333;
+    line-height:30px;
+    font-size: 14px;
+    padding:20px 30px;
+    min-height: 740px;
+    background-color: #fff;
+}
+.recommend-read {
+    width: 220px;
+    padding: 10px 30px;
+    min-height: 740px;
+    background-color: #fff;
+}
+
+.font-tit{font-size: 18px;color: #1446a0}
+.cor-d{color: #999;padding-bottom: 10px}
+.new-tj{margin: 0;padding: 0}
+.new-tj li{list-style: none;padding: 15px 0;position: relative;}
+.new-tj li a{color: #fff}
+.new-tj li h2{position: absolute;left: 0;bottom:15px;width: 100%;font-size: 14px}
+.new-tj li div{display: none;position: absolute;left:0;top:15px;width: 100%;height:136px;
+background:rgba(20, 70, 160, 0.6)!important;filter:Alpha(opacity=60); background:#1446a0;padding-top:35px;font-size: 14px}
+.new-tj li div button{background: #ec9b4a;padding: 5px 30px; border-radius: 5px;border: none;margin-top: 5px}
+.new-tj li:hover div{display: block}

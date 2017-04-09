@@ -1,0 +1,199 @@
+/*培训*/
+/*2015-09-10*/
+
+
+/*浅蓝色  3498db*/
+
+
+.bg-gray3 { background: url("../../img/home/h-bg.jpg") repeat-x left top #eff3f5; width: 100%; height: auto; overflow: hidden; zoom: 1;}
+
+.edu-main { float: left; width: 880px;}
+.edu-aside { float: right; width: 280px; }
+
+/*培训首页*/
+.edu-list { margin-top: 40px; }
+.edu-list > li { margin-bottom: 30px; }
+.edu-list .cover { display: block; float: left; width: 340px; height: 152px; overflow: hidden; }
+.edud-tleft .cover .ribbon,
+.edu-list .cover .ribbon { position: absolute; top: -5px; left: -5px; background: url("../../img/edu/edu-ribbon.png") no-repeat left top; width: 67px; height: 68px;}
+.edu-list .cover .price { position: absolute; right: 10px; bottom: 10px; padding: 0 8px; height: 28px; border: 1px solid rgba(255,255,255,.3); background-color: rgba(0,0,0,.3); font-size: 12px; color: #fff; line-height: 28px; border-radius: 5px; }
+.edu-list .cover .mask { position: absolute; bottom: 0; background: url("../../img/edu/edu-mask.png") repeat-x center bottom; width: 100%; height: 40px; }
+.edu-list .info { float: left; width: 520px; margin-left: 20px; }
+.edu-list .info h2 a { display: inline-block; margin: 5px 0; font-size: 18px; color: #2c3e50; }
+.edu-list .info h2 a:hover { color: #3498db; }
+.edu-li-tag { width: 100%; height: 24px; margin-bottom: 12px; overflow: hidden; }
+.edu-li-tag li { float: left; height: 22px; margin-right: 10px; padding: 0 10px; font-size: 12px; color: #7f8c8d; line-height: 22px; border: 1px solid #7f8c8d; border-radius: 2px; }
+.edu-li-det li.intro { max-height: 48px; overflow: hidden; }
+.edu-li-tag li.green { color: #e67e22; border-color: #e67e22;}
+.edu-li-tag li.orange { color: #1abc9c; border-color: #1abc9c;}
+.edu-li-det li { line-height: 24px; font-size: 14px; color: #7f8c8d; }
+.edu-li-det li > strong { color: #2c3e50; }
+.edu-li-det li > a { color: #2f99de; }
+.edu-li-det li > a:hover { text-decoration: underline; }
+.edu-li-det .name { color: #3498db; }
+.edu-li-det .name:hover { text-decoration: underline; }
+.edu-li-det .sale { font-size: 14px; color: #34495e; font-style: italic;}
+.edu-li-det .sale strong { font-size: 24px; color: #e74c3c; line-height: 16px; font-weight: 900; }
+.edu-li-det .icon-help { font-size: 18px; color: #95a5a6; }
+.edu-li-det .icon-help:hover { color: #f39c12; text-decoration: none; }
+
+/*培训首页右侧*/
+.edu-ad { width: 280px; height: 260px; overflow: hidden; }
+.edu-screen { margin-top: 30px; }
+.edu-screen h3 { margin-top: 5px; font-size: 24px; color: #7c7c7c; line-height: 40px; }
+.edu-screen li { float: left; }
+.edu-screen li a { display: block; width: 73px; height: 30px; overflow: hidden; margin-right: 20px; font-size: 14px; color: #7f8c8d; line-height: 30px; }
+.edu-screen li.on a,
+.edu-screen li a:hover { color: #3498db; }
+.edu-screen li a.tint{color:#DBE0E0;}
+/*更多城市*/
+.edu-screen-more i { font-size: 12px; }
+/*下拉按钮*/
+.edu-drop { width: 100%; height: 36px; margin-top: 15px; background: url("../../img/edu/edu-drop.png") repeat-x center top; }
+.edu-drop span { display: block; position: relative; margin: 0 auto; width: 43px; height: 36px; background: url("../../img/home/arrow3.png") no-repeat center top; cursor: pointer; }
+.edu-drop span:before,
+.edu-drop.open span:before { content:""; position: absolute; left: 16px; top: 12px; width: 0; height: 0; border-style: solid; border-color: transparent; }
+.edu-drop span:before { border-top-color: #7f8c8d; border-width: 6px 6px 0 6px; }
+.edu-drop.open span:before { border-bottom-color: #7f8c8d; border-width: 0 6px 6px 6px; }
+
+/*入驻*/
+.edu-ruzhu { margin: 50px 0; width: 280px; height: 50px; background-color: #3498db; text-align: center; cursor: pointer; }
+.edu-ruzhu i { margin-right: 8px; font-size: 24px; color: #fff; line-height: 50px; vertical-align: middle; }
+.edu-ruzhu span { font-size: 14px; color: #fff; line-height: 50px; vertical-align: middle; }
+
+/*入驻弹框*/
+.modal-ruzhu-edu { width: 700px; margin: 0 auto; }
+.modal-ruzhu-edu .hd { width: 700px; height: 60px; background-color: #3498db; }
+.modal-ruzhu-edu .hd h1 { font-size: 24px; color: #fff; line-height: 60px; text-indent: 22px; }
+.modal-ruzhu-edu .hd h1 small { font-size: 14px; color: #a7dcff; }
+.modal-ruzhu-edu .cont { width: 650px; padding: 30px 25px; height: auto; }
+.modal-ruzhu-edu .cont .row { height: 50px; line-height: 50px; margin-bottom: 17px; }
+.modal-ruzhu-edu .cont .row label { float: left; width: 120px; margin-right: 15px; font-size: 14px; color: #7f8c8d; text-align: right; }
+.modal-ruzhu-edu .cont .row input { float: left; width: 485px; height: 50px; padding: 10px 15px; margin-right: 30px; border: 1px solid #e4e9ed; 
+-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+.modal-ruzhu-edu .cont .row input:focus { border-color: #3498db; }
+.modal-ruzhu-edu .submit { margin-top: 25px; padding-top: 30px; text-align: center; border-top: 1px solid #ecf0f1; }
+.modal-ruzhu-edu .submit .btn { width: 100px; height: 40px; line-height: 40px; padding: 0; }
+.modal-ruzhu-edu .icon-close { top: 20px; right: 20px; font-size: 20px; color: #2876b1; }
+/*成功*/
+#ruzhu_ok { display: none; }
+.modal-ruzhu-edu .tit { text-align: center; margin-top: 30px; }
+.modal-ruzhu-edu .tit i{ display: inline-block; margin-right: 5px; font-size: 50px; color: #2ecc71; vertical-align: middle; line-height: 50px; }
+.modal-ruzhu-edu .tit span { display: inline-block; font-size: 36px; color: #2ecc71; vertical-align: middle; line-height: 50px;  }
+.modal-ruzhu-edu .txt { font-size: 18px; line-height: 34px; text-indent: 175px; }
+
+
+/*培训详情页*/
+.edud-tleft { float: left; width: 560px; }
+.edud-tleft .cover { display: block; width: 560px; height: 250px; }
+.edud-tleft h1 { margin: 10px 0 5px; font-size: 24px; color: #2c3e50; }
+.edud-tleft p { font-size: 14px; color: #7f8c8d; line-height: 26px; }
+.edud-tright { float: left; width: 580px; margin-left: 40px; }
+.edud-tright h1 { margin-top: 5px; font-size: 24px; color: #2c3e50; }
+.edud-tright .info { margin-bottom: 10px; }
+/*.edud-tright .info .price { margin-right: 60px; font-size: 30px; color: #f39c12; }*/
+.edud-tright .info .num { font-size: 16px; color: #e74c3c; }
+/*.edud-tright .info .num i { font-size: 16px; color: #7f8c8d; }*/
+.edud-tright .edu-li-det li { line-height: 31px; }
+.edud-tright .edu-li-det li.intro { max-height: 62px; overflow: hidden; }
+.edud-tright .btn-group { margin-top: 15px; }
+.edud-tright .btn-group .btn-primary,
+.edud-tright .btn-group .btn-gray { width: 340px; padding: 0; margin-right: 40px; font-size: 20px; height: 70px; line-height: 70px; border-radius: 0;}
+.edud-tright .btn-group .btn-qq { width: 200px; padding: 0; font-size: 20px; height: 70px; line-height: 70px; color: #fff; background-color: #2980b9; border-radius: 0;}
+.edud-tright .btn-group .btn-qq i { float: left; margin-left: 37px; font-size: 40px; color: #fff; line-height: 70px; }
+.edud-tright .btn-group .btn-qq span { float: left;}
+.edu-tit { padding: 35px 0 15px; font-size: 24px; color: #7c7c7c; }
+
+/*内容*/
+.edu-view { padding: 30px 0; }
+.edu-view img { display: block; max-width: 1140px; margin: 0 auto; }
+
+/*支付页面*/
+
+.edup-tit { padding-top: 25px; font-size: 24px; color: #2c3e50; }
+.edup-info { padding: 12px 0 20px; margin-bottom: 20px; font-size: 14px; color: #7f8c8d; border-bottom: 1px solid #e4e8ea; }
+.edup-info strong { margin-right: 35px; font-size: 18px; color: #f39c12; }
+.edup-info .tip { font-size: 14px; color: #f39c12; }
+.edup-info .tip i { font-size: 18px; color: #f39c12; }
+
+.edup-form { }
+.edup-form .row { width: 100%; height: 40px; line-height: 40px; margin-bottom: 15px; }
+.edup-form .row label { float: left; width: 120px; font-size: 14px; color: #7f8c8d; text-align: right;}
+.edup-form .row input { float: left; width: 318px; padding: 10px; height: 20px; line-height: 20px; border: 1px solid #bdc3c7; }
+.edup-form .row input:focus { border: 1px solid #3498db; }
+.edup-form .row .tip { float: left; width: 700px; margin-left: 20px; line-height: 40px; color: #7f8c8d; }
+.edup-form .row .tip .btn { padding: 0; width: 160px; height: 40px; line-height: 40px; font-size: 14px; color: #2c3e50; background-color: #bdc3c7; border-radius: 0; }
+.edup-form .row .tip .btn.on { color: #fff; background-color: #3498db; }
+.edup-form .submit { margin-left: 120px; margin-top: 10px; width: 340px; height: 70px; padding: 0; border-radius: 0; font-size: 20px; color: #fff; line-height: 70px; }
+
+.edup-pay { width: 1100px; height: 430px; margin-top: 40px; padding: 25px 40px; background: url("../../img/edu/edu-pay.png") repeat-x left top #fff; border-top: 4px solid #cacfd3;}
+.edup-pay h1 { font-size: 24px; color: #2c3e50; }
+.edup-pay .pay { margin-top: 20px; margin-left: 40px; }
+.pay-label { display: inline-block; height: 44px; cursor: pointer; }
+.pay-label input { position: absolute; top: 15px; left: 0; z-index: 1; opacity: 0; cursor: pointer;}
+.pay-label .radio { position: absolute; top: 15px; left: 0; width: 6px; height: 6px; background-color: #fff; border: 4px solid #dbdbdb; border-radius: 50%; }
+.pay-label .zhifubao { display: block; margin-left: 30px; width: 90px; height: 30px; padding:5px; border:2px solid transparent; }
+.pay-label .yinhang { display: block; margin-left: 30px; font-size: 16px; color: #34495e; line-height: 44px; }
+
+.pay-label.on .radio { border-color: #f39c12; }
+.pay-label.on .zhifubao { border-color: #f39c12; }
+.pay-label.on + .yinhang-box { display: block; }
+
+.yinhang-box {display:none;width:732px;padding:10px 0 0 40px; overflow:hidden;}
+.yinhang-box a{float:left;width:90px;border:1px solid #e9e9e9;margin: 0 10px 10px 0;height:40px;padding:0 10px;}
+.yinhang-box a img{width:100%;margin-top:3px;}
+.yinhang-box a.on{border-color:#f39c12;}
+
+.edup-pay .submit { display: block; padding: 0; border-radius: 0; margin: 15px 0 0 40px; width: 340px; height: 70px; font-size: 20px; line-height: 70px; }
+
+/*充值抵现说明*/
+.modal-payinfo { width: 700px; margin: 0 auto; background-color: #fff; z-index: 101; }
+.modal-payinfo .hd { position: relative; width: 100%; height: 60px; background-color: #3498db; }
+.modal-payinfo .hd span { margin-left: 22px; font-size: 24px; color: #fff; line-height: 60px; }
+.modal-payinfo .hd i { position: absolute; right: 15px; top: 20px; font-size: 20px; color: #2676b6; cursor: pointer;}
+.modal-payinfo .cont { background-color: #fff; padding: 25px 30px; width: 640px; }
+.modal-payinfo .cont h5 { font-size: 18px; color: #2c3e50; margin-bottom: 5px; }
+.modal-payinfo .cont p { font-size: 14px; color: #7f8c8d; line-height: 24px; margin-bottom: 15px; }
+
+/*查看地图*/
+.modal-map { position: relative; width: 700px; height: 400px; margin: 0 auto; background-color: #fff; z-index: 101; }
+.modal-map .icon-close { position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; background-color: rgba(0,0,0,.5); font-size: 22px; color: #fff; text-align: center; line-height: 40px; cursor: pointer; }
+
+/*充值结果-失败-成功*/
+.payresult { padding: 50px 0; min-height: 450px; }
+.payresult .tit { height: 50px; line-height: 50px; font-size: 36px; text-align: center; margin: 0 auto 40px; }
+.payresult .tit i { margin-right: 5px; font-size: 50px; line-height: 50px; }
+.payresult .succ,
+.payresult .icon-succ { color: #2ecc71; }
+.payresult .fail,
+.payresult .icon-fail { color: #e74c3c; }
+
+.payresult .cont { padding: 0 120px 25px; margin-bottom: 50px; border-bottom: 1px solid #e4e8ea; }
+.payresult .cont p { font-size: 14px; color: #7f8c8d; line-height: 24px; margin-bottom: 22px; }
+.payresult .error + .cont p { margin-bottom: 2px; }
+
+
+.payresult .btn-group { width: 440px; margin: 0 auto; }
+.payresult .btn { float: left; margin: 0 auto; padding: 0; border-radius: 0; line-height: 70px; height: 70px; }
+.payresult .btn-primary  { width: 340px; font-size: 20px; }
+.payresult .btn-nature { width: 100px; font-size: 20px; color: #2f99de; }
+
+/*打开默认选择城市弹框*/
+.modal-selcity { width: 630px; margin: 0 auto; background-color: #fff; }
+.modal-selcity .hd { position: relative; width: 100%; height: 60px; background-color: #3498db; }
+.modal-selcity .hd h1 { font-size: 24px; color: #fff; text-indent: 20px; line-height: 60px; }
+.modal-selcity i.icon-close { position: absolute; right: 15px; top: 20px; font-size: 20px; color: #2676b6; cursor: pointer;}
+.modal-selcity .cont { width: 550px; padding: 30px 40px; }
+.modal-selcity .cont h2 { margin-bottom: 8px; font-size: 20px; color: #7f8c8d; }
+.modal-selcity .cont .txt { font-size: 16px; color: #7f8c8d; }
+.modal-selcity .cont .sel { width: 520px; margin-top: 35px; padding: 25px 15px; border-top: 1px solid #ecf0f1; }
+.modal-selcity .cont .sel li { float: left; }
+.modal-selcity .cont .sel li a { display: block; width: 100px; margin: 15px; height: 50px; border: 2px solid #ecf0f1; font-size: 16px; color: #9a9a9a; text-align: center; line-height: 50px; 
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;}
+.modal-selcity .cont .sel li.on a { border-color: #3498db; color: #333; }
+.modal-selcity .cont .tip { font-size: 14px; color: #7f8c8d; }
+

@@ -1,0 +1,300 @@
+/*
+* @description: 上传作品、上传经验、上传主题
+* @require: uicn.css
+* @date: 2015-04-02 
+* @update: (2015-04-02 10:58)
+*/
+
+.w280 { width: 280px!important; }
+
+/*上传封面图片*/
+
+.up-cover-pic {
+    display: block;
+    margin: 0 0 10px;
+}
+
+.up-cover-pic img {
+    width: 280px;
+    height: 210px;
+}
+
+
+/*上传封面提示信息*/
+
+.up-cover-num {
+    float: left;
+    margin: 6px 5px 6px 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6b7884;
+}
+
+
+/*
+* 上传作品框
+*/
+
+
+/*上传作品预览*/
+
+.up-thumb-tips {
+    float: left;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #b8c4ce;
+    line-height: 30px;
+}
+
+.up-thumb-box {
+    min-height: 428px;
+    width: 95%;
+    border: 1px dashed #b8c4ce;
+    padding: 19px;
+}
+
+.up-thumb-item {
+    float: left;
+    position: relative;
+    margin: 8px;
+    width: 260px;
+    height: 194px;
+    border: 2px solid transparent;  
+    overflow: hidden;
+    transition: border-color 0.2s ease-out;
+}
+
+.up-thumb-item:hover {
+    border: 2px solid #e67e22;
+}
+.up-thumb-item img {
+    width: 100%; height: 100%;
+}
+
+/*上传位置提示*/
+.up-thumb-add,
+.up-thumb-bar { 
+    float: left; position: relative; 
+    height: 192px; width: 258px; 
+    border: 1px dashed #b8c4ce;  
+    margin: 10px; 
+    background: #FFF; 
+    transition:border-color 0.2s ease-out; 
+    cursor: pointer; 
+}
+
+/*上传格式提醒块，jpg,png,gif*/
+.upload-icon { 
+    display: block; 
+    width: 50px; 
+    height: 50px; 
+    margin: 20px auto 10px;
+}
+.upload-icon .upload-icon-file { 
+    opacity: 0; filter: alpha(opacity=0); 
+    display: block; cursor: pointer;
+    width: 262px; height: 196px;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0; 
+}
+
+.upload-icon i { 
+    width: 50px; 
+    height: 50px; 
+    display: block; 
+    margin: 0 auto; 
+    font-size: 50px; 
+    color: #e67e22;
+}
+
+.up-thumb-add .tit {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #2d3e4f;
+    font-weight: bold;
+}
+
+.up-thumb-add .tip {
+    text-align: center;
+    font-size: 12px;
+    color: #abb0b4;
+}
+
+
+/*上传进度条*/
+.up-thumb-bar:hover {
+    height: 190px; width: 256px; 
+}
+
+.up-thumb-bar .bar-border {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    height: 14px;
+    border: 2px solid #e67e22;
+    
+    border-radius: 14px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.up-thumb-bar .bar-border .bar-cont {
+    width: 0;
+    height: 14px;
+    background-color: #e67e22;
+    border-radius: 14px;
+}
+
+
+/*滑过作品显示操作*/
+
+.up-thumb-item .thumb-oper {
+    position: absolute;
+    bottom: -80px;
+    /*bottom: 0;*/
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border-top: 2px solid #e67e22;
+}
+
+.up-thumb-item .thumb-oper .set {
+    padding: 7px 5px;
+    width: 120px;
+}
+
+.up-thumb-item .thumb-oper .set span {
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    color: #b8c5ce;
+}
+
+.up-thumb-item .thumb-oper .set i {
+    font-size: 56px;
+    color: #b8c5ce;
+}
+
+
+/*封面*/
+
+.up-thumb-item .thumb-oper .cov {
+    float: left;
+}
+
+.up-thumb-item .thumb-oper .cov span {
+    float: right;
+    margin-right: 10px;
+}
+
+.up-thumb-item .thumb-oper .cov i {
+    float: right;
+    margin-right: 5px;
+}
+
+.up-thumb-item .thumb-oper .cov:hover span,
+.up-thumb-item .thumb-oper .cov:hover i {
+    color: #e67e22;
+}
+
+
+/*删除*/
+
+.up-thumb-item .thumb-oper .del {
+    float: right;
+}
+
+.up-thumb-item .thumb-oper .del span {
+    float: left;
+    margin-left: 10px;
+}
+
+.up-thumb-item .thumb-oper .del i {
+    float: left;
+    margin-right: 5px;
+}
+
+.up-thumb-item .thumb-oper .del:hover span,
+.up-thumb-item .thumb-oper .del:hover i {
+    color: #e74c3d;
+}
+
+/*上传头像*/
+.up-cover-bar { 
+    position: absolute; left: 0; top: 0; 
+    width: 0; height: 40px; 
+    background-color: #eb984e;  border-radius: 2px;
+}
+.up-cover-bar + input[type="file"] {
+    position: absolute; cursor: pointer; top: 0px; left: 0px;
+    width: 100%; height: 100%;  z-index: 100; opacity: 0;
+}
+.up-cover-btn {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.up_tit { margin: 40px 0 15px;}
+
+
+/*法律信息*/
+.origin_box {
+    width: 755px; padding: 25px 20px; margin-bottom: 30px; height: auto; background-color: #fff; border: 1px solid #bdc3c7;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.origin_box .tit {
+    font-size: 14px; color: #e67e22; line-height: 22px; margin-bottom: 30px; 
+}
+.origin_box .cl {
+    position: relative; margin-bottom: 15px;
+}
+.origin_box .ele {
+    float: left; width: 150px; margin-right: 30px;
+}
+.origin_box .cont {
+    float: left; width: 500px; 
+}
+.origin_item .ele {
+    height: 22px;
+}
+.origin_item .cont {
+    width: 528px;
+}
+.origin_item .remove {
+    float: right; width: 50px; font-size: 14px; color: #e54d42; text-decoration: underline;
+}
+.origin_box .control_input {
+    padding: 8px 10px;
+}
+.origin_box .btn {
+    float: right; width: 80px; height: auto; color: #fff; font-weight: bold; 
+}
+.origin_box_tip {
+    color: #abb0b4; text-indent: 35px; line-height: 35px; 
+}
+
+/*快速提醒*/
+.quick_tips {
+    clear: both;
+    border-top: 1px dashed #bdc3c7; padding: 25px 0;
+}
+.quick_tips p {
+    position: relative;
+    margin-left: 28px; margin-bottom: 15px;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+}
+.quick_tips span {
+    position: absolute; top: 6px; left: -28px;
+    display: inline-block;
+    width: 10px; height: 10px; background-color: #6b7884; border-radius: 50%;
+}

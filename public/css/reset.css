@@ -1,0 +1,361 @@
+/*!
+ * description: 公共样式
+ *
+ * date: 2015-12-21 
+ * update: (2015-XX-XX XX:XX)
+ */
+
+img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}
+
+body {
+	margin: 0;
+	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #2d3e4f;
+	background-color: #ecf0f1;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	-moz-font-feature-settings: "liga","kern";
+}
+ul,ol,li,dl,dd {
+	margin: 0;
+	padding: 0;
+}
+ul,ol {
+	list-style: none outside none;
+}
+img {
+	border: 0;
+	vertical-align: middle;
+	width: inherit;
+	height: inherit;
+}
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+legend {
+	padding: 0;
+}
+input,
+textarea { 
+	border: none;
+	overflow: hidden;
+	resize: none; 
+	font-size: 14px; 
+	color: #2d3e4f;
+}
+input:focus,
+textarea:focus { outline: none; }
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {color: #cfd1d4; font-size: 14px; }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color: #cfd1d4; font-size: 14px; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color: #cfd1d4; font-size: 14px; }
+
+a {
+	color: #2d3e4f;
+	outline: medium none;
+	text-decoration: none;
+	background: transparent;
+	star:expression(this.onFocus=this.blur());
+}
+a:hover {
+	color: #2d3e4f;
+}
+a.link { 
+	font-size: 18px; 
+	color: #2e81b7; 
+	font-weight: bold; 
+	text-decoration: underline; 
+	word-wrap:break-word; 
+	word-break: break-all; 
+}
+
+/* 文本属性：标题 字号、样式、颜色、背景颜色 */
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+	color: inherit;
+	font-family: inherit;
+	line-height: 1.5;
+	margin: 0;
+}
+h1,.h1 { font-size:36px;}
+h2,.h2 { font-size:24px; }
+h3,.h3 { font-size:20px; }
+h4,.h4 { font-size:18px; line-height:1.5555556; }
+h5,.h5 { font-size:16px; }
+h6,.h6 { font-size:14px; line-height:1.5714285; }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 { font-weight: normal!important; }
+
+p { margin: 0; 
+	font-size: 14px; 
+	line-height: 1.57142858; 
+	color: inherit; 
+	word-wrap:break-word; 
+	word-break: break-all; 
+}
+small { font-size: 12px; }
+
+/* 字号 */
+.f12 { font-size: 12px !important; }
+.f14 { font-size: 14px !important; line-height:1.5714285; }
+.f16 { font-size: 16px !important; }
+.f18 { font-size: 18px !important; line-height:1.5555556; }
+.f20 { font-size: 20px !important; }
+.f24 { font-size: 24px !important; }
+
+/*字体颜色*/
+
+.txt_dark {}
+a.txt_dark:hover {}
+.txt_tint {}
+a.txt_tint:hover {}
+.txt_orange { color: #e67e22!important; }
+.txt_green { color: #29bb9c!important; }
+.txt_red { color: #e54d42!important; }
+.txt_primary { color: #2d3e4f!important; }
+.txt_half { color: #2d3e4f!important; opacity: 0.5; filter:alpha(opacity=50);}  
+.txt_mhalf { color: #8f979e!important; }
+.end_1{
+	color: #e67e22!important;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+/*字体图标*/
+.iconfont, [class^="icon-"], [class*=" icon-"] {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  color: #b8c4ce;
+  font-style:normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 浮动 */
+.z { float: left !important; }
+.y { float: right !important; }
+
+/* 清除浮动 */
+.cl:before, .cl:after{ content:" "; display: table }
+.cl:after { clear: both }
+.cl { *zoom: 1 }
+
+/* 显示/隐藏 */
+.show { display: block !important; }
+.hide { display: none !important; }
+
+/* 相对定位 */
+.pos { position: relative; }
+
+/*块级元素*/
+.block { display: block!important; margin-left: auto; margin-right: auto; }
+.inblock { display: inline-block!important; }
+
+/*单行文本溢出文本显示省略号*/
+.ellipsis {
+	display: block; 
+	overflow: hidden; 
+	white-space: nowrap; 
+	text-overflow: ellipsis; 
+}
+
+/*背景颜色*/
+.bg_white { background-color: #fff!important; }
+.bg_orange { background-color: #e67e22!important; }
+.bg_gray { background-color: #eff3f5!important; }
+
+
+/*头像圆角*/
+.avatar img { border-radius:50%; }
+
+.bold { font-weight: bold; }
+
+/**
+ * 按钮 Buttons 
+ **/
+/*.btn {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	min-width: 100px;
+	letter-spacing: 1px;
+	font-size: 14px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;   /*禁止选择文字*/
+	/*   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	border: none;
+	border-radius: 4px;
+	transition: background-color 0.2s ease-in-out;
+
+	position: relative;*/
+/*}
+.btn:hover { color: inherit; }
+.btn:focus, 
+.btn:active:focus { outline: none; }
+*/
+/*禁用按钮*/
+.btn.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  /*filter: alpha(opacity=60);*/
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  /*opacity: .60;*/
+}
+/*无背景按钮*/
+.btn_nature { color: #2e81b7; background-color: transparent; }
+/*.btn-nature:hover { color: #3498db; }*/
+
+/*橙色按钮*/
+.btn_orange { color: #fff; background-color: #e67e22; }
+.btn_orange:hover { color: #fff; }
+.btn_gray { color: #fff; background-color: #c0c5ca; }
+.btn_gray:hover { color: #fff; }
+.btn_blue { color: #fff; background-color: #2f81b7; }
+.btn_blue:hover { color: #fff; }
+.btn_white { color: #e67e22; background-color: #fff; }
+.btn_white:hover { color: #e67e22; }
+/*.btn-orange:active { background-color: #ee6f1a; }*/
+
+.btn_block { display: block; width: 100%; }
+
+
+/* 通用容器，定义页面宽度 */
+.wpn { width: 1180px; margin: 0 auto;}  	/* 4 列 * 300 */
+.wpm { width: 1480px; margin: 0 auto; }  	/* 5 列 * 300 */
+.wpw { width: 1780px; margin: 0 auto; } 	/* 6 列 * 300 */
+
+/* 外边距样式，作用于元素的上下外边距 */
+.mtn { margin-top: 5px !important; }
+.mtm { margin-top: 10px !important; }
+.mtw { margin-top: 20px !important; }
+.mtv { margin-top: 30px !important; }
+
+.mbn { margin-bottom: 5px !important; }
+.mbm { margin-bottom: 10px !important; }
+.mbw { margin-bottom: 20px !important; }
+.mbv { margin-bottom: 30px !important; }
+.mbh { margin-bottom: 40px !important; }
+.mrn { margin-right: 5px !important; }
+.mrm { margin-right: 10px !important; }
+.mrw { margin-right: 20px !important; }
+.mrv { margin-right: 30px !important; }
+
+.mln { margin-left: 5px !important; }
+.mlm { margin-left: 10px !important; }
+.mlw { margin-left: 20px !important; }
+.mlv { margin-left: 30px !important; }
+
+.mtbn { margin: 5px 0 !important; }
+.mtbm { margin: 10px 0 !important; }
+.mtbw { margin: 20px 0 !important; }
+.mtbv { margin: 30px 0 !important; }
+
+.mlrn { margin: 0 5px !important; }
+.mlrm { margin: 0 10px !important; }
+.mlrw { margin: 0 20px !important; }
+.mlrv { margin: 0 30px !important; }
+
+
+/* 内边距样式，作用于元素的上下内边距，上下各具有 n, m, w 三个级别 */
+.ptn { padding-top: 5px !important; }
+.ptm { padding-top: 10px !important; }
+.ptw { padding-top: 20px !important; }
+.ptv { padding-top: 30px !important; }
+
+.prn { padding-right: 5px !important; }
+.prm { padding-right: 10px !important; }
+.prw { padding-right: 20px !important; }
+.prv { padding-right: 30px !important; }
+
+.pln { padding-left: 5px !important; }
+.plm { padding-left: 10px !important; }
+.plw { padding-left: 20px !important; }
+.plv { padding-left: 30px !important; }
+
+.pbn { padding-bottom: 5px !important; }
+.pbm { padding-bottom: 10px !important; }
+.pbw { padding-bottom: 20px !important; }
+.pbv { padding-bottom: 30px !important; }
+
+.ptbn { padding: 5px 0 !important; }
+.ptbm { padding: 10px 0 !important; }
+.ptbw { padding: 20px 0 !important; }
+.ptbv { padding: 30px 0 !important; }
+
+.plrn { padding: 0 5px !important; }
+.plrm { padding: 0 10px !important; }
+.plrw { padding: 0 20px !important; }
+.plrv { padding: 0 30px !important; }
+
+.w140 { width: 140px!important; }
+.w180 { width: 180px!important; }
+.w380 { width: 380px!important; }
+.w800 { width: 800px!important; }
+
+.w280 { width: 280px!important; }
+.w580 { width: 580px!important; }
+.w880 { width: 880px!important; }
+
+.line_top { border-top: 1px solid #bdc3c7; }
+.line_bottom { border-bottom: 1px solid #ecf0f1; }
+.bg_gray{
+	background-color: #ecf0f1!important;
+}
+/* 占位符 */
+.placeholder { background: url("../img/placeholder.png") no-repeat center center; 
+	    width: 100%;
+	    height: 520px;
+	    background-size: 15%;}
+/*加载旋转*/
+.loading{background: url("../img/loading.svg") no-repeat center center; 
+	background-size: 40px; color: #fff;
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 99;
+}
+/*自旋*/
+.spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

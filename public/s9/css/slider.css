@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+/*
+ *
+ * 竞赛轮播图样式
+ *
+ * 2016-02-03
+ *
+ */
+
+/* slider */  /*1180*350*/
+ * {
+  -webkit-backface-visibility: hidden;
+
+}
+#mainSlider {
+    padding: 10px 0 0 0;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+}
+
+#sliderBox {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    width: 5900px;
+    margin-left: -2950px;
+}
+
+#slideInner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5900px;
+}
+
+#slideInner li {
+    /*-webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;*/
+    float: left;
+    width:1180px;
+    position: relative;
+}
+
+#slideInner li:after {
+    /*-webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+*/    opacity: 1;
+    visibility: visible;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#slideInner li a {
+    display: block;
+    position: relative;
+}
+/*#slideInner li a:hover img {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}*/
+#slideInner li span {
+    display: block;
+}
+
+#slideInner li .img {
+    overflow: hidden;
+    max-height: 350px;
+}
+
+#slideInner li img {
+    width: 100%;
+}
+
+/*当前显示图片*/
+#slideInner li.current {
+    margin-top: -10px;
+    z-index: 2;
+    height: 350px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+}
+
+#slideInner li.current:after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*小圆点*/
+#pageCounter {
+    opacity: 0;
+    transition: opacity .3s;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 10;
+    padding: 4px 16px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,.15);
+    filter:alpha(opacity=15);
+    font-size: 0;
+    height: 22px;
+}
+#pageCounter .page {
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+#pageCounter .page span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,.4);
+    filter:alpha(opacity=40);
+    transition: width .3s ease-out;
+}
+#pageCounter .page.current span {
+    width: 30px; 
+}
+
+#mainSlider:hover #pageCounter {
+    opacity: 1;
+}
+
+/*左右切换箭头*/
+#btnPrev,
+#btnNext {
+    opacity: 0;
+    transition: opacity .3s;
+    position: relative;
+    cursor: pointer;
+}
+#btnPrev i,
+#btnNext i {
+    position: absolute;
+    margin-top: 150px;
+    font-size: 35px;
+    color: rgba(255, 255, 255, .5);
+}
+#btnPrev i{
+transform:rotate(270deg);
+ -ms-transform:rotate(270deg);/* IE 9 */
+ -moz-transform:rotate(270deg);/* Firefox */
+ -webkit-transform:rotate(270deg);
+}
+#btnNext i{
+transform:rotate(90deg);
+ -ms-transform:rotate(90deg);/* IE 9 */
+ -moz-transform:rotate(90deg);/* Firefox */
+ -webkit-transform:rotate(90deg);
+}
+#btnPrev i {
+    left: -50px;
+}
+#btnNext i {
+    right: -50px;
+}
+#mainSlider:hover #btnPrev,
+#mainSlider:hover #btnNext{
+    opacity: 1;
+}
+.banner_wpn{
+    position: relative;
+    height: 35px;
+    left: 50%;
+    margin-left: -590px;
+    z-index: 11111111;   
+    background: transparent; 
+}

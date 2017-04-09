@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery 处理页面动画效果</title>
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url: "http://localhost:3000/www/textajax.php",	//请求地址
+				type:"get",								//请求方式
+				dataType:"text",						//接收数据的格式
+				success: function(msg){					//执行成功的回调函数
+					alert(msg);
+				},
+				error:function(){						//执行失败的回调函数
+					alert("ajax请求错误");
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+</body>
+</html>
+
+
+

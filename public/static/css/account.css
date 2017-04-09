@@ -1,0 +1,324 @@
+/*
+*  description:  注册登录忘记密码css
+*  require:      bootstrap.min.css reset.css
+*  relevancy:    none
+*  date:         2016-12-20
+*  update:       (2016-12-20 09:54)
+*/
+.cf-wrap{
+  width: 1180px;
+  padding: 0 10px 56px;
+  margin: -185px auto 0;
+}
+.cf-wrap .tlt{
+  font-size: 36px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: #4877ed;
+  width:636px;
+}
+.cf-confirm-wrap{
+  width: 636px;
+  height: 498px;
+  position: relative;
+ 
+  margin:0 auto;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.forgot-form{
+   height: 420px;
+}
+
+.form-wrap .form-hd{
+  height: 92px;
+}
+.form-wrap .form-hd dl{
+  float: left;
+  width: 212px;
+  margin-bottom: 0;
+  cursor: pointer;
+  text-align: center;
+  color: #666;
+  position: relative;
+  border-bottom: 1px solid #4f74b8;
+}
+.form-wrap .form-hd dl dt{
+  width: 78px;
+  display: inline-block;
+  border-bottom: 1px solid #666;
+  padding: 15px 0 5px 0;
+}
+.form-wrap .form-hd dl dt span{
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 12px;
+  vertical-align: middle;
+  font-weight: normal;
+}
+.form-wrap .form-hd dl dt i{
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+.form-wrap .form-hd dl dd.sub-tlt{
+  font-size: 16px;
+  line-height: 36px;
+  margin-bottom: 5px;
+}
+.form-wrap .form-hd dl img{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.form-wrap .form-hd dl.cur{
+  color: #fff;
+  background-color: #1446a0;
+}
+.form-wrap .form-hd dl.cur dt{
+  border-bottom-color: #fff;
+}
+.form-wrap .form-hd dl.cur .arrow{
+  position: absolute;
+  width: 16px;
+  height: 11px;
+  background:url('../img/arrow.png') no-repeat;
+  left: 50%;
+  margin-left: -8px;
+}
+/* 表单内容 */
+.form-wrap .form-bd{
+
+}
+.form-wrap .form-bd form{
+  width: 400px;
+  margin:0 auto;
+  margin-top: 14px;
+}
+.form-wrap .form-bd form .tip {
+    color: #e15554;
+    font-size: 12px;
+    background-color: #ebebeb;
+    width: 300px;
+    height: 26px;
+    line-height: 26px;
+    margin-left: 79px;
+    padding-left: 12px;
+    border-radius: 4px;
+}
+.form-wrap .form-bd form .form-group{
+  margin-bottom: 24px;
+}
+.form-wrap .form-bd form .form-group>label{
+  width: 100px;
+  padding-right: 0;
+  margin-right: 21px;
+  margin-left: -27px;
+  line-height: 38px;
+  color: #666;
+  font-size: 16px;
+}
+.form-wrap .form-bd form .form-group .ipt{
+  width: 314px;
+  padding-left: 0;
+}
+.form-wrap .form-bd form .form-group input[type="text"],
+.form-wrap .form-bd form .form-group input[type="password"]{
+  height: 46px;
+}
+.form-wrap .form-bd form .form-group .yzm{
+  padding-left: 0;
+  width: 188px;
+}
+.form-wrap .form-bd form .code-img{
+  float: left;
+}
+.form-wrap .form-bd .code-info{
+  float: left;
+  color: #999;
+  line-height: 20px;
+}
+.form-wrap .form-bd .next-btn{
+  padding: 0;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #b2c6f7;
+  font-size: 16px;
+  color: #fff;
+  margin-left: -13px;
+}
+
+/* 账户确认 */
+.account-form-bd .account{
+  margin-top: 10px;
+}
+.account-form-bd .account p{
+ font-size: 14px;
+}
+.account-form-bd .sms-btn{
+  float: left;
+  width: 110px;
+}
+.account-form-bd .sms-btn button{
+  width: 100%;
+  height: 46px;
+  text-align: center;
+  color: #4877ed;
+  border:1px solid #4877ed;
+  padding: 0;
+}
+
+
+/* 注册 */
+
+.form-wrap .form-bd .account-btn{
+  padding: 0;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #b2c6f7;
+  font-size: 16px;
+  color: #fff;
+}
+
+.reg-form-wrap{
+ min-height:480px;
+
+}
+.reg-form {
+  margin-top: 50px;
+  margin-left:60px;
+ }
+
+ .reg-wrap{
+  margin-top:-135px;
+ }
+
+.w328{
+  width:328px !important;
+ }
+
+.reg-divider{
+    height: 120px;
+    width: 1px;
+    border-left: 1px solid #ccc;
+ }
+
+.reg-middle .or{
+  margin-left: -5px;
+ }
+
+.forward{
+  display: inline-block;
+  border-radius: 25px;
+  width:16px;
+  height: 16px;
+  background: url(../../static/icon/right_arrow.svg) no-repeat  center center;
+  background-size:12px 12px;
+  background-color:#fff;
+  vertical-align: middle;
+}
+
+.reg-aside{
+  margin-left: 34px;
+}
+
+.reg-aside p .btn{
+  padding-left: 0px;
+}
+.reg-aside .left-up{
+  width: 10px;
+  height: 20px;
+  border-left:1px solid #4877ED;
+  border-top:1px solid #4877ED;
+  border-right:none;
+  border-bottom: none;
+}
+
+.right-down{
+  width: 10px;
+  height: 20px;
+  border-right:1px solid #4877ED;
+  border-bottom:1px solid #4877ED;
+  border-left:none;
+  border-top: none;
+  margin-left: 131px;
+}
+
+/*登录页面*/
+.login-form{
+  height: 380px;
+}
+.account-icon{
+  
+
+ 
+  background: url(../../static/icon/account_gray.svg) no-repeat  0 center;
+  background-size:18px 18px;
+  background-position-x: 15px;
+  vertical-align: middle;
+  padding-left:40px;
+}
+
+.pass-icon{
+  background: url(../../static/icon/password_gray.svg) no-repeat  0 center;
+  background-size:18px 18px;
+ background-position-x: 15px;
+  vertical-align: middle;
+  padding-left:40px;
+}
+
+/*注册成功页面*/
+  .bg-png{
+    height: 554px;
+    
+    background: url(../../static/img/bg.png) no-repeat  center center;
+  }
+  /*.login-success {
+    width:600px;
+  }*/
+  .login-success h2{
+    padding-top: 60px;
+  }
+  .login-success .center-block .btn-link{
+    border:1px solid #fff;
+    border-radius: 4px;
+  }
+
+  .login-success .center-block .btn-default{
+    
+    border-radius: 4px;
+
+  }
+
+  .login-success p{
+
+    margin-bottom: 4px;
+  }
+
+
+  .login-success .center-block button{
+    width:155px;height: 37px;
+  }
+
+  .check{
+    display: inline-block;
+    border-radius: 25px;
+    width:50px;
+    height: 50px;
+    background: url(../../static/icon/check.svg) no-repeat  center center;
+    background-size:40px 30px;
+    background-color:#fff;
+    vertical-align: middle;
+  }
+  h2 span{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+  }
+
