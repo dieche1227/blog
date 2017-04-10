@@ -4,9 +4,16 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Services\GoodsUserParamService;
 
 class GoodsUserParamController extends Controller
 {
+   
+    protected $goodsUserParamService;
+    public function __construct(GoodsUserParamService $goodsUserParamService)
+    {
+        $this->goodsUserParamService = $goodsUserParamService;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -36,43 +43,49 @@ class GoodsUserParamController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request->input());
+        //dd($request->input());
 
-        [
-          "goodsuid" => "15b9843a154c11e7898129aef2eb8e4b"
-          "ismust-0" => "1"
-          "param-name-0" => "称呼"
-          "tip-0" => "如：张先生,李小姐"
-          "ismust-1" => "1"
-          "param-name-1" => ""
-          "tip-1" => ""
-          "ismust-2" => ""
-          "param-name-2" => ""
-          "input-type" => "single-line"
-          "tip-2" => ""
-          "ismust-3" => ""
-          "param-name-3" => ""
-          "input-type-3" => "multiple-line"
-          "tip-3" => ""
-          "ismust-4" => ""
-          "param-name-4" => ""
-          "input-type-4" => "checkbox"
-          "tip-4" => ""
-          "param-name-4-param" => array:2 [
-            0 => ""
-            1 => ""
-          ]
-          "ismust-5" => ""
-          "param-name-5" => ""
-          "input-type-5" => "radio"
-          "tip-5" => ""
-          "param-name-5-param" => array:2 [
-            0 => ""
-            1 => ""
-          ]
+        $requestData = $request->input();
+        $data['goods_guid'] = $requestData['goodsuid'];
+        unset($requestData['goodsuid']);
 
+        $i = 0 ;
+        foreach ($requestData as $key => $value) 
+        {
+            switch ($i%5) {
+                case 0:
+                    $data['is_must'] = $value;
+                    $i++;
+                    break;
+                case 1:
+                    $data['input_param_name'] = $value;
+                    $i++;
+                    break;
+                case 2:
+                    $data['input_type'] = $value;
+                    $i++;
+                    break;
+                case 3:
+                    $data['tip'] = $value;
+                    $i++;
+                    break;
+                case 4:
+                    if ($value !== null)
+                    {
+                        $data['input_param_param'] = json_encode($value);
+                    } else {
+                        $data['input_param_param'] = '';
+                    }
+                    $i++;
+                    $res = $this->goodsUserParamService->create($data);
+                    //dd($res);
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+        }
     }
-
     /**
      * Display the specified resource.
      *

@@ -50,6 +50,10 @@
                             <div class="h3 z mln"> 
                                 －添加商品基本信息
                             </div>
+                             
+                           
+                           
+
                         </div>
                         <div class="account_warp ptv warp_list">
                             <div class="cont mtv cl">
@@ -236,6 +240,8 @@
                             <div class="h3 z mln"> 
                                 －如果其他用户对此商品有需求需要填写表单
                             </div>
+
+                            <button class="mlv btn post_btn y btn_orange" type="" id="edit-param">编辑</button>
                         </div>
                         <div class="account_warp ptv warp_list cl">
                             <div class="z w70" >
@@ -250,7 +256,8 @@
                                         </label>
                                         <label class="control-label w20 z f16 txt-center">称呼</label>
                                         <input name="param-name-0" type="hidden" value="称呼"> 
-
+                                        <input type="hidden" name="input-type-0" value="single-line">
+                                         <input type="hidden" name="param-name-0-param" value="null">
                                         <div class="w68 z">
                                             <input  type="text" class="w100 p14" placeholder="如：张先生,李小姐"  disabled="" value="如：张先生,李小姐"> 
                                              <input name="tip-0" type="hidden" value="如：张先生,李小姐"> 
@@ -274,12 +281,14 @@
                                                 必选
                                             </label>
                                             <label class=" w20 z f16 txt-center">
-                                                <input name="param-name-1" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  input-type="single-line">
+                                                <input name="param-name-1" value="" id="" type="text" class="w90 p14" placeholder="单行文本框" >
+                                                <input type="hidden" name="input-type-1" value="single-line">
+
+                                                <input type="hidden" name="param-name-1-param" value="null">
                                             </label>
                                             <div class="w68 z">
                                                 <input name="tip-1" type="text" required class="w100 p14" placeholder="提示信息写这里"> 
                                             </div>
-
                                             <div class="w5 z txt-center remove-param">
                                             删除
                                             </div>
@@ -602,8 +611,10 @@ $(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框">'+
-            '<input type="hidden" name="input-type" value="single-line">'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框">'
+             +'<input type="hidden" name="input-type-'+num+'" value="single-line">'
+            +'<input type="hidden" name="param-name-'+num+'-param" value="null">'
+           
             +'</label>'
 
             +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none"></span></div>'
@@ -615,7 +626,8 @@ $(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  input-type="multiple-line" >'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="多行文本框"  input-type="multiple-line" >'
+             +'<input type="hidden" name="param-name-'+num+'-param" value="null">'
             +'<input type="hidden" name="input-type-'+num+'" value="multiple-line">'
             +'</label>'
             +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"><span class="help-block m-b-none"></span></div>'
@@ -626,7 +638,7 @@ $(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框">'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单选按钮">'
 
             +'<input type="hidden" name="input-type-'+num+'" value="radio">'
 
@@ -653,7 +665,7 @@ $(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="多选按钮"  >'
             +'<input type="hidden" name="input-type-'+num+'" value="checkbox">'
 
             +'</label>'
@@ -678,19 +690,21 @@ $(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
-            +'<input type="hidden" name="input-type-'+num+'" value="single-image">'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单图片框"  >'
+             +'<input type="hidden" name="input-type-'+num+'" value="single-image">'
+             +'<input type="hidden" name="param-name-'+num+'-param" value="null">'
+           
             +'</label>'
             +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"></div>'
             +'<div class="w5 z txt-center remove-param">删除</div></div>');
     });
-
     // 多图片文本框点击
     $('.js-multiple-image-button').click(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="多图片框"  >'
+             +'<input type="hidden" name="param-name-'+num+'-param" value="null">'
             +'<input type="hidden" name="input-type-'+num+'" value="multiple-image">'
             +'</label>'
             +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"></div>'
@@ -703,7 +717,8 @@ $(function(){
         num++;
         $('.user-define').append('<div class="cl apply-list-form mtv">'
             +'<label class="w10 z f16 txt-center"> <input name="ismust-'+num+'" value="" id="" type="checkbox"  checked>必选</label>'
-            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="单行文本框"  >'
+            +'<label class=" w20 z f16 txt-center"><input name="param-name-'+num+'" value="" id="" type="text" class="w90 p14" placeholder="文件框"  >'
+             +'<input type="hidden" name="param-name-'+num+'-param" value="null">'
             +'<input type="hidden" name="input-type-'+num+'" value="file">'
             +'</label>'
             +'<div class="w68 z"><input name="tip-'+num+'" type="text" class="w100 p14" placeholder="提示信息写这里"></div>'

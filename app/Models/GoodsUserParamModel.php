@@ -17,4 +17,7 @@ class GoodsUserParamModel extends Model
     protected $dateFormat = 'U';//处理时间戳
     protected $guarded = [];//黑名单
    // protected $fillable = ['key', 'value'];//白名单
+     protected $primaryKey="guid";
+    public $incrementing=false;//设置非递增或者非数字的主键，需要加
+
 }
