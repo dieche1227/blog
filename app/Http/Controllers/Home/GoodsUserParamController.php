@@ -21,7 +21,7 @@ class GoodsUserParamController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -32,6 +32,7 @@ class GoodsUserParamController extends Controller
     public function create()
     {
         //
+        return view('home.goodsuserparam.create');
     }
 
     /**
