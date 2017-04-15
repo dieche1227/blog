@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Services\GoodsService;
 use App\Services\AreaService;
 use App\Services\UnitService;
+use App\Services\GoodsUserService;
 use App\RedisStore\RedisCommon;
 use App\Tools\Common;
 
@@ -16,13 +17,16 @@ class GoodsController extends InitController
     protected $goodsService;
     protected $areaService;
     protected $unitService;
+    protected $goodsUserService;
 
-    public function __construct(GoodsService $goodsService, AreaService $areaService, UnitService $unitService)
+    public function __construct(GoodsService $goodsService, AreaService $areaService, UnitService $unitService, goodsUserService $goodsUserService)
     {
 
         $this->goodsService = $goodsService;
         $this->areaService = $areaService;
         $this->unitService = $unitService;
+        $this->goodsUserService = $goodsUserService;
+
     }
 
     /**
@@ -100,10 +104,12 @@ class GoodsController extends InitController
      */
     public function store(Request $request)
     {   
-        
+        //var_dump($request->input());
+        $param = $request->input();
+        $guid = $request->input('goods_guid');
+        $res1 = $this->goodsService->update($param, $guid);
+        $res2 = $this->goodsUserService->create($param);
 
-
-       // $res = $this->goodsService->createGood($param);
        // if ($res) {
 
        // }

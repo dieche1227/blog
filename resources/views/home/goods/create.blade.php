@@ -7,9 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>添加商品</title>
           <!-- modal css-->
-       
         <!-- 七牛 css-->
-    
         <link rel="stylesheet" href="{{asset('qiniu/styles/main.css')}}">
         <link rel="stylesheet" href="{{asset('qiniu/styles/highlight.css')}}">
 
@@ -41,19 +39,15 @@
         <div class="warp_1180 wpn cl">
             <!-- 右侧内容 -->
             <div class="main more z mtv">
-                <form action="#" method="get" id="afaq">
+                <form action="#" method="get" id="afaq" onSubmit="return false;">
 
                     <input type="hidden" name="goodsuid" value="{{ $goodsInfo['guid'] }}">
                     <div class="main_warp">
                         <div class="title cl">
-                            <div class="h1 z">商品</div>
+                            <div class="h1 z">商品/服务</div>
                             <div class="h3 z mln"> 
-                                －添加商品基本信息
+                                －添加商品/服务基本信息
                             </div>
-                             
-                           
-                           
-
                         </div>
                         <div class="account_warp ptv warp_list">
                             <div class="cont mtv cl">
@@ -111,7 +105,7 @@
                                     <div class="z rit">
                                         <div class="option_cont cl">
                                             <div class="option sel_w_area cur pos z">
-                                                <input class="control_input" type="hidden" name="" value="">
+                                                <input class="control_input" type="hidden" name="province" value="">
                                                     <span>北京</span>
                                                     <i class="arrow"></i>
                                                     <ol class="sel_option" style="display: none;">
@@ -136,13 +130,7 @@
                                         <p class="ele z">参数(产地)</p>
                                         <p class="cont z">参数详情(北京)</p>
                                     </div>
-                                    <foreach name="goodinfo['parameters']" item="vo" key="k" >
-                                        <div class="origin_item cl"> 
-                                            <p class="ele txt_half"> {$vo['name']} </p> 
-                                            <p class="cont txt_half"> {$vo['desc']}</p> 
-                                            <a href="javascript:;" class="remove" rel="{$vo['id']}">删除</a>  
-                                        </div>
-                                    </foreach>
+                                    
                                     <div class="cl" id="addBox">    
                                         <input type="text" name="para_name" class="control_input ele z" value="">
                                         <input type="text" name="para_desc" class="control_input cont z" value="">
@@ -190,7 +178,7 @@
                               <!-- 商品介绍 -->
                             <div class="cont mtv cl Personal">
                                <em class="h2 lin54 z">商品介绍：</em>
-                                <div class="txta z">
+                                <div class="txta z" style="width:100%;">
                                     <!-- 加载编辑器的容器 -->
 <script id="container" name="content" type="text/plain" style="width: 100%;margin:0 auto;">
 这里写产品介绍
@@ -198,14 +186,76 @@
 
 <!-- 实例化编辑器 -->
 <script type="text/javascript">
-  
+//     var ue = UE.getEditor('container', {
+//     toolbars: [
+//             ['bold', 'italic', 'underline', 'strikethrough', 'blockquote', 'insertunorderedlist', 'insertorderedlist', 'justifyleft','justifycenter', 'justifyright',  'link', 'insertimage', 'fullscreen']
+//         ],
+//     elementPathEnabled: false,
+//     enableContextMenu: false,
+//     autoClearEmptyNode:true,
+//     wordCount:false,
+//     imagePopup:false,
+//     autotypeset:{ indent: true,imageBlockLine: 'center' }
+// });
+
+$(function(){
+
+
+
+
      var ue =  UE.getEditor('container', {
+                     toolbars: [
+            ['bold', 'italic', 'underline', 'strikethrough', 'blockquote', 'insertunorderedlist', 'insertorderedlist', 'justifyleft','justifycenter', 'justifyright',  'link', 'simpleupload', 'fullscreen']
+        ],  
                     autoHeight: false,
                     lang:"zh-cn",
                     });
         ue.ready(function() {
-        ue.execCommand('serverparam', '_token', '{{ csrf_token() }}');//此处为支持laravel5 csrf ,根据实际情况修改,目的就是设置 _token 值.    
+        ue.execCommand('serverparam', '_token', '{{ csrf_token() }}');//此处为支持laravel5 csrf ,根据实际情况修改,目的就是设置 _token 值. 
     });
+
+
+        $('#formSubmit').click(function(){
+                //获取html内容，返回: <p>hello</p>
+                var description = ue.getContent(); 
+
+                var goodsuid = $('input[name="goodsuid"]').val();
+                    // 计量单位
+                var unit = $('input[name="unit"]').val();
+                //采购数量及周期
+                var  shuliang = $('input[name="shuliang"]').val();
+                var  danwei = $('input[name="danwei"]').val();
+                var zhouqi =  $('input[name="zhouqi"]').val();
+                var province = $('input[name="province"]').val();
+                var city = $('input[name="city"]').val();
+                
+              $.ajax({
+                     type:'post',
+                     //async:false,
+                     url : '/goods',
+                     data:{
+                        goods_guid: goodsuid,
+                        name  : unit,
+                        shuliang: shuliang,
+                        danwei: danwei,
+                        zhouqi: zhouqi,
+                        province:province,
+                        city:city,
+                        description:description,
+                        unit:unit
+                     },
+                     dataType:'json',
+                     success:function(msg){
+                       alert(111);
+                       return false;
+                       
+                     },
+                     error:function(){
+                        
+                     }
+                 });
+            }); 
+}); 
 </script>
                                 <!-- <div class="txta z">
                                     <textarea class="h5" name="intro" ></textarea>
@@ -222,7 +272,7 @@
 
 
                 <div class="ptv cl pbv prv">
-                    <button class="mlv btn post_btn y btn_orange" type="" id="testsub">确定</button>
+                    <button class="mlv btn post_btn y btn_orange" type="" id="formSubmit" >确定</button>
                     <button class="btn post_btn y" href="javascript:;" title="">取消</button>
                 </div>
             </div>
@@ -287,7 +337,10 @@ $(function(){
             return file.name;
         },
         success:function(up, file, info){
-
+            var goodsuid = $('input[name="goodsuid"]').val();
+            // alert(file.name);
+            // alert(file.type);
+            // alert(file.size);
              var liId = file.id;
                 $('#'+liId).empty().append('<img style="width:280px;height:210px" src="'+"http://img.maixiangtong.com/"+file.target_name+'" alt="">'+
                     '<div class="thumb-oper" rel="" style="bottom: -80px;">'+
@@ -295,11 +348,32 @@ $(function(){
                             '<i class="icon-pic-round"></i>'+
                             '<span class="">封面</span>'+
                         '</a>'+
-                        '<a class="set del" href="javascript:;">'+
+                        '<a class="set del js-img-del"' +'path="'+file.target_name+'" ' +' href="javascript:;">' +
                             '<i class="icon-error-thin"></i>'+
-                            '<span id="up_del" class="">删除</span>'+
+                            '<span  '+' class="">删除</span>'+
                         '</a>'+
                     '</div>').addClass('up-thumb-item');
+            //发送请求，通知后台PHP 告诉后台这个图片是哪个商品的
+             $.ajax({
+                 type:'post',
+                 async:false,
+                 url : '/goodsimg',
+                 data:{
+                    goods_guid: goodsuid,
+                    name  : file.name,
+                    path: file.target_name,
+                    size: file.size,
+                    type: file.type
+                 },
+                 dataType:'json',
+                 success:function(msg){
+                    console.log(msg);  
+                   
+                 },
+                 error:function(){
+                    
+                 }
+             });
            
         }
     });
@@ -322,6 +396,32 @@ $(function(){
            .animate({
                'bottom' :   -80
            },150);
+    });
+</script>
+
+<!-- 商品图片删除 -->
+
+<script type="text/javascript">
+     $(document).on('click', '.js-img-del', function(){
+        //alert(0);
+       var path = $(this).attr('path');
+        //发送请求，通知后台PHP 告诉后台这个图片是哪个商品的
+             $.ajax({
+                 type:'post',
+                 async:false,
+                 url : '/goodsimg/' + path,
+                 data:{
+                    _method: "DELETE",
+                 },
+                 dataType:'json',
+                 success:function(msg){
+                    console.log(msg);  
+                   
+                 },
+                 error:function(){
+                    
+                 }
+             });
     });
 </script>
     <!--   -->
@@ -395,7 +495,7 @@ $(function(){
                 console.log(r);
                 globalTip({"msg":r.msg,"setTime":5});
                 if(r.status){
-                    var addItem = '<div class="origin_item cl"> <p class="ele txt_half"> '+para_name+' </p> <p class="cont txt_half"> '+para_desc+' </p> <a href="javascript:;" class="remove" rel="'+r.id+'">删除</a> </div>'
+                    var addItem = '<div class="origin_item cl"> <p class="ele txt_half"> '+para_name+' </p> <p class="cont txt_half"> '+para_desc+' </p> <a href="javascript:;" class="remove" rel="'+r.guid+'">删除</a> </div>'
                         $("#addBox").before(addItem);
                         $("input[name=para_name]").val("");
                         $("input[name=para_desc]").val("");
@@ -414,18 +514,18 @@ $(function(){
     // 删除参数
     $(document).on('click','.origin_item .remove',function(){
 
-        var id = $(this).attr('rel');
+        var guid = $(this).attr('rel');
         var $this = $(this);
         $.ajax({
-            url: '/delpara',
+            url: '/goodsparam/'+guid,
             type: 'post',
             data: {
-                id  : id,
+                _method: 'DELETE',
             },
             dataType: 'json',
             success: function(r) {
-                globalTip({"msg":r.message,"setTime":5});
-                console.log(r);
+                globalTip({"msg":r.msg,"setTime":5});
+                //console.log(r);
                 if(r.status){
                     $this.parent(".origin_item").remove();
                     }

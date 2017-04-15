@@ -1,18 +1,22 @@
 <?php
 
+
+
 namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Services\GoodsParamService;
+use App\Services\GoodsImgService;
 
-class GoodsParamController extends Controller
-{ 
-    protected $goodsParamService;
-    public function __construct(GoodsParamService $goodsParamService)
-    {
-        $this->goodsParamService = $goodsParamService;
-    }
+
+class GoodsImgController extends Controller
+{
+    protected $goodsImgService;
+    
+     public function __construct(GoodsImgService $goodsImgService)
+     {
+        $this->goodsImgService = $goodsImgService;
+     }
 
 
 
@@ -34,6 +38,8 @@ class GoodsParamController extends Controller
     public function create()
     {
         //
+
+
     }
 
     /**
@@ -45,16 +51,9 @@ class GoodsParamController extends Controller
     public function store(Request $request)
     {
         $data = $request->input();
-        $res = $this->goodsParamService->create($data);
-        //dd($res->guid);
-        if ( $res )
-        {
-            return ['status' => 'true', 'msg' => '添加成功', 'guid' => $res->guid];
-        } else {
-            return ['status' => 'false', 'msg' => '添加失败'];
-        }
-         
-
+        
+        $res = $this->goodsImgService->create($data);
+        return $res;
 
     }
 
@@ -101,14 +100,7 @@ class GoodsParamController extends Controller
     public function destroy($id)
     {
         //
-        $res = $this->goodsParamService->delete($id);
-        if ( $res )
-        {
-            return ['status' => 'true', 'msg' => '删除成功'];
-        } else {
-            return ['status' => 'false', 'msg' => '删除失败'];
-        }
-
+        $res = $this->goodsImgService->delete($id);
+        return $res;
     }
-       
 }

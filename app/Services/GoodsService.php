@@ -56,6 +56,24 @@ class GoodsService
         return $result;
     }
 
+    /**
+     * 更新商品信息
+     *
+     */
+    public function update($param,$guid)
+    {
+        //处理参数
+
+        unset($param['goods_guid']);
+
+        $data['name'] = $param['name'];
+        $data['description'] = $param['description'];
+        $data['unit'] = $param['unit'];
+
+        $result = $this->goodsModel->where(['guid'=>$guid])->update($data);
+        return $result;
+    }
+
 
 
 }

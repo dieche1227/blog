@@ -32,6 +32,9 @@ Route::resource('goodsparam','Home\GoodsParamController');
 //为商品添加用户时，用户需要填的参数
 Route::resource('goodsuserparam','Home\GoodsUserParamController');
 
+//为商品添加用户时，用户需要填的参数
+Route::resource('goodsimg','Home\GoodsImgController');
+
 //用户注册页
 Route::resource('register','Home\UserController@create');
 //创建用户

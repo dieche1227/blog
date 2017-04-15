@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Gregwar\Captcha\CaptchaBuilder;
 use Illuminate\Support\Facades\Session;
-use App\Tools\Common;
-use App\Services\SendService;
+// use App\Tools\Common;
+// use App\Services\SendService;
 
 class CodeController extends Controller
 {
