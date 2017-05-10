@@ -8,7 +8,8 @@ use App\Services\GoodsService;
 use App\Services\AreaService;
 use App\Services\UnitService;
 use App\Services\GoodsUserService;
-use App\RedisStore\RedisCommon;
+use App\Services\GoodsImgService;
+use App\Redis\RedisCommon;
 use App\Tools\Common;
 
 class GoodsController extends InitController
@@ -18,15 +19,16 @@ class GoodsController extends InitController
     protected $areaService;
     protected $unitService;
     protected $goodsUserService;
+    protected $goodsImgService;
 
-    public function __construct(GoodsService $goodsService, AreaService $areaService, UnitService $unitService, goodsUserService $goodsUserService)
+    public function __construct(GoodsService $goodsService, AreaService $areaService, UnitService $unitService, goodsUserService $goodsUserService, GoodsImgService $goodsImgService)
     {
 
         $this->goodsService = $goodsService;
         $this->areaService = $areaService;
         $this->unitService = $unitService;
         $this->goodsUserService = $goodsUserService;
-
+        $this->goodsImgService = $goodsImgService;
     }
 
     /**
@@ -45,20 +47,25 @@ class GoodsController extends InitController
         } else {
             $page = $input['page'];
         }
-        // $redisCommon = new RedisCommon('LIST:GOODS:LIST','HASH:GOODS:INFO',$this->goodsService);
 
-        // $data = $redisCommon->getAllRedis('getGoodsList',['page'=> ]);
+        $page=2;
 
-       $goods = $this->goodsService->getGoodsList();
-         //dd($data);
-       
-        $pageHtml = \App\Tools\CustomPage::page($goods['total'], $goods['current_page'], $pnum = 1, $pagenum = 5, '/goods?', $pagename = 'page',$anchor = '');
+        $redisCommon = new RedisCommon('LIST:GOODS:LIST','HASH:GOODS:INFO',$this->goodsService);
+        $data = $redisCommon->getAllRedis('getGoodsList',[]);
 
+        dd($data);
 
-        
-         return view('home.goods.index', compact('goods', 'pageHtml'));
+        $goods = $this->goodsService->getGoodsList();
 
-        
+     
+        foreach ($goods['data'] as $key => $value) {
+            $goods['data'][$key]['faceImg'] =  $this->goodsImgService->getGoodsFace($value['guid']);   
+        }
+     
+
+        // $pageHtml = \App\Tools\CustomPage::page($goods['total'], $goods['current_page'], $pnum = 1, $pagenum = 5, '/goods?', $pagename = 'page',$anchor = '');
+
+        return view('home.goods.index', compact('goods', 'pageHtml'));
     }
 
     /**
@@ -71,8 +78,9 @@ class GoodsController extends InitController
         //查询当前用户是否有未发布的商品
         $loginUid = $this->loginUid; 
         $goodsInfo = $this->goodsService->getInfo(['publish_uid' => $loginUid,
-                                        'is_published' => 0,
-                                    ]);
+                                                   'is_published' => 0,
+                                                 ]);
+
         if( !$goodsInfo )
         {
            $guid = Common::getUuid(); 
@@ -106,13 +114,17 @@ class GoodsController extends InitController
     {   
         //var_dump($request->input());
         $param = $request->input();
+        $param['is_published'] = 1;
         $guid = $request->input('goods_guid');
         $res1 = $this->goodsService->update($param, $guid);
-        $res2 = $this->goodsUserService->create($param);
-
-       // if ($res) {
-
-       // }
+        //$res2 = $this->goodsUserService->create($param);
+        if ($res1) {
+            return ['status'=>true,
+                    'msg'=>'商品添加成功'];
+        } else {
+            return ['status'=>false,
+                    'msg'=>'商品添加失败'];
+        }
     }
 
     /**
@@ -124,6 +136,9 @@ class GoodsController extends InitController
     public function show($id)
     {
         //
+        $goodsInfo = $this->goodsService->getInfo(['guid'=>$id])->toArray();
+        $goodsImgs = $this->goodsImgService->getGoodsImgs($id);
+        return view('home.goods.show', compact('goodsInfo', 'goodsImgs'));
     }
 
     /**
@@ -135,6 +150,32 @@ class GoodsController extends InitController
     public function edit($id)
     {
         //
+        $file_path = "1.txt";
+        if (file_exists($file_path)) 
+        {
+            $str = file_get_contents($file_path);//将整个文件内容读入到一个字符串中
+            $str = str_replace("\r\n","<br />",$str);
+            //echo $str;
+        }
+        $tmpArray = explode('----------------',$str);
+        foreach ($tmpArray as $key => $value) {
+            preg_match_all("|[\x{4e00}-\x{9fa5}]+[0-9]{4}|u",
+            $value,
+            $out, PREG_PATTERN_ORDER);
+           $res[] = $out;
+        }
+        //dd($res);
+
+        foreach ($res as $key => $value) {
+            foreach ($value as $k => $v) {
+                foreach ($v as $k1 => $v1) {
+                    \DB::table('data_category')->insert(array('name' => $v1));
+                }
+                
+                   
+               
+            }
+        }
     }
 
     /**

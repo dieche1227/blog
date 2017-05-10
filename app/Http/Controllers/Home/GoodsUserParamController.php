@@ -29,10 +29,11 @@ class GoodsUserParamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
-        return view('home.goodsuserparam.create');
+       $goodsuid = $request->get('goodsuid');
+        //dd($goodsuid);
+        return view('home.goodsuserparam.create', compact('goodsuid'));
     }
 
     /**
@@ -86,6 +87,10 @@ class GoodsUserParamController extends Controller
                     break;
             }
         }
+
+        return ['status'=>true,'msg'=>'添加成功'];
+
+
     }
     /**
      * Display the specified resource.

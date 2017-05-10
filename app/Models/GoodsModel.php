@@ -18,11 +18,8 @@ class GoodsModel extends Model
     protected $primaryKey="guid";
     public $incrementing=false;//设置非递增或者非数字的主键，需要加
 
-
     public function getGoodsList($param=[])
     {
-
        return  $this->where($param)->paginate(10);
-
     }
 }

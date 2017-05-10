@@ -80,7 +80,7 @@ class GoodsImgController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 给图片排序
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -89,6 +89,21 @@ class GoodsImgController extends Controller
     public function update(Request $request, $id)
     {
         //
+        //var_dump($request->input('orderBy'));die;
+        $str = $request->input('orderBy');
+        $res = $this->goodsImgService->sortimg($str);
+
+        // dd($res);
+        if( $res['status'] )
+        {
+            return ['status'=>true,'msg'=>'操作成功'];
+        } else {
+            return ['status'=>false,'msg'=>'操作失败'];
+        }
+        //explode(",", $str);
+
+
+
     }
 
     /**

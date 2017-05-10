@@ -6,7 +6,7 @@ a.hlogo {
     line-height: 70px; 
     text-align: center;
     cursor: pointer; transition: all .3s;
-    background:url(../images/17logo.png) no-repeat;
+    background:url(../img/maixiangtong.png) no-repeat;
 }
 
 .hnav { float: left; max-width: 600px; height: 70px; }

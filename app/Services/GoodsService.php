@@ -42,7 +42,7 @@ class GoodsService
     public function getGoodsList($param=[])
     {
        $goodsList = $this->goodsModel->getGoodsList($param)->toArray();
-       return $goodsList;
+       return $goodsList['data'];
     }
 
 
@@ -64,12 +64,12 @@ class GoodsService
     {
         //处理参数
 
-        unset($param['goods_guid']);
+        //unset($param['goods_guid']);
 
         $data['name'] = $param['name'];
         $data['description'] = $param['description'];
         $data['unit'] = $param['unit'];
-
+        $data['is_published'] = 1;
         $result = $this->goodsModel->where(['guid'=>$guid])->update($data);
         return $result;
     }

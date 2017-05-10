@@ -5,7 +5,7 @@
         <meta name="renderer" content="webkit"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>添加商品</title>
+        <title>如果其他用户对此商品有需求需要填写表单</title>
           <!-- modal css-->
        
        
@@ -41,7 +41,7 @@
             <div class="main more z mtv">
                 <form action="#" method="get" id="param">
 
-                   <!--  <input type="hidden" name="goodsuid" value=" $goodsInfo['guid'] "> -->
+                    <input type="hidden" name="goodsuid" value="{{ $goodsuid }}"> 
                     <div class="main_warp">
                         <div class="title cl">
                             <div class="h1 z">商品</div>
@@ -73,6 +73,41 @@
                                             </span>
                                         </div>
                                         
+                                </div>
+                                <div class="cl apply-list-form mtv">
+                                        <label class="w10 z f16 txt-center"> 
+                                            <input  type="checkbox" checked>
+                                             <input name="ismust-1" value="1"  id="" type="hidden">
+                                            必选
+                                        </label>
+                                        <label class="control-label w20 z f16 txt-center">所在城市</label>
+                                        <input name="param-name-1" type="hidden" value="称呼"> 
+                                        <input type="hidden" name="input-type-0" value="single-line">
+                                         <input type="hidden" name="param-name-1-param" value="null">
+                                        <div class="w68 z">
+                                            <input  type="text" class="w100 p14" placeholder="如：张先生,李小姐"  disabled="" value="如：北京，海淀;河北，唐山"> 
+                                             <input name="tip-1" type="hidden" value="如：北京，海淀;河北，唐山"> 
+                                            <span class="help-block m-b-none">
+                                            </span>
+                                        </div>     
+                                </div>
+
+                                 <div class="cl apply-list-form mtv">
+                                        <label class="w10 z f16 txt-center"> 
+                                            <input  type="checkbox" checked>
+                                             <input name="ismust-2" value="1"  id="" type="hidden">
+                                            必选
+                                        </label>
+                                        <label class="control-label w20 z f16 txt-center">采购周期和数量</label>
+                                        <input name="param-name-2" type="hidden" value="称呼"> 
+                                        <input type="hidden" name="input-type-0" value="single-line">
+                                         <input type="hidden" name="param-name-2-param" value="null">
+                                        <div class="w68 z">
+                                            <input  type="text" class="w100 p14" placeholder="如:300箱/年"  disabled="" value="如:300箱/年"> 
+                                             <input name="tip-2" type="hidden" value="如:300箱/年"> 
+                                            <span class="help-block m-b-none">
+                                            </span>
+                                        </div>     
                                 </div>
 
                               
@@ -186,11 +221,12 @@
                 url: '/goodsuserparam',
                 dataType: 'json',
                 success: function(msg) {
-                    if (msg.status) {
-                        window.location.href="faq?title=faq";
-                    } else {
-                        alert(msg.msg);
-                    }
+                    console.log(msg);
+                    // if (msg.status) {
+                    //     window.location.href="faq?title=faq";
+                    // } else {
+                    //     alert(msg.msg);
+                    // }
                 },
                 error: function() {
                     errorTip("请求错误,稍后再试");
@@ -204,7 +240,7 @@
 
 <script type="text/javascript">
 $(function(){  
-    var num = 1;
+    var num = 5;
     //单行文本框点击
     $('.js-single-line-button').click(function(){
         num++;

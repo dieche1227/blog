@@ -165,8 +165,9 @@
 }
 
 .up-thumb-item .thumb-oper .set {
-    padding: 7px 5px;
-    width: 120px;
+   
+        padding: 7px 5px;
+    width: 45px;
 }
 
 .up-thumb-item .thumb-oper .set span {
@@ -207,7 +208,10 @@
 /*删除*/
 
 .up-thumb-item .thumb-oper .del {
-    float: right;
+     
+    display: block;
+    margin: 0 auto;
+   
 }
 
 .up-thumb-item .thumb-oper .del span {

@@ -25,7 +25,7 @@
             <ul class="hnav cl">
                 <li ><a href="/goodlist">商品库</a></li>
                 <li class="on"><a href="/quanzilist">圈子</a></li>
-                <li ><a href="/bidlist">招标</a></li>
+                <li ><a href="/bidlist">活动</a></li>
                 <li ><a href="/rule">规则</a></li>
             </ul>
            
@@ -41,16 +41,7 @@
     </div>
     <!-- 头部结束 -->
 
-<style>
- .author span{
-    height: 24px;
-    line-height: 24px;
-    padding: 0 15px;
-    font-size: 14px;
-    text-align: center;
-    /*background-color: #eff3f5;*/
-    border-radius: 20px;
-    }
+
 </style>
     <div class="bg_white pt58">
     <!-- 正在进行的比赛 -->
@@ -64,31 +55,15 @@
                         </foreach>
                     </h2>
                     <ul class="works_on">
-                   
                         @foreach ($goods['data'] as $good)
-                            
-    
                             <li>
                                 <a href="/goodinfo/{$vo['id']}" class="cover">
-                                    <img src="{$vo['frontcover']}" alt="" width="280" height="210">
-                                    <time>
-                                        {$vo['allnum']}/{$vo['jiliang']}/
-                                            <empty name="vo['isanyue']">
-                                                年
-                                            <else />
-                                                月
-                                            </empty>
-                                    </time>
+                                    <img src="{{$good['faceImg']}}" alt="" width="280" height="210">
                                 </a>
                                 <div class="info">
-                                    <h4><a href="/goodinfo/{$vo['id']}"> {{ $good['guid'] }}</a></h4>
-                                    <p class="txt_half">{$vo['specifications']}</p>
-                                     <div class="author cl">
-
-                                        <span class="z icon-dabiao">&nbsp&nbsp&nbsp{$vo.membernum}</span>
-                                        <span class="z icon-comment">&nbsp&nbsp&nbsp{$vo.commentnum}</span>
-                                        <span class="z icon-eye">&nbsp&nbsp&nbsp{$vo.viewnum}</span>                   
-                                    </div> 
+                                    <h4><a href="/goodinfo/{$vo['id']}"> {{ $good['name'] }}</a></h4>
+                                    <p class="txt_half">329会员</p>
+                                    
                                 </div>
                             </li>
                         @endforeach

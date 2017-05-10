@@ -54,19 +54,23 @@ class RedisCommon
 
 
         $list = \Redis::lrange($this->list_key, 0, -1);
+        //dd(!empty($list));
         if (!empty($list)) {
             $data = collect($list)->reduce(function($data,$list){
                 $data[] = \Redis::hGetAll($this->hash_key . $list);
+
                 return $data;
             }, []);
+             //dd($data);
             return $data;
         }
         $data = $this->server->$function($param);
+        //dd($data);
         if (empty($data)) {
             return false;
         }
         $hash_key = $this->hash_key;
-        dd($data);
+       // dd($data);
         foreach ($data as $key => $value) {
             $this->hash_key = $this->hash_key . $key;
             $this->insert($value, $key);
@@ -75,6 +79,41 @@ class RedisCommon
         return $data;
     }
 
+    //获取商品分页数据
+
+    public function getPageRedis($function, $param = [])
+    {
+        $perPage = isset($param['perPage'])?:$param['perPage']:16; 
+        
+        $currentPage = $param['currentPage'];
+
+        $list = \Redis::lrange($this->list_key, 0, -1);
+        //dd(!empty($list));
+        if (!empty($list)) {
+            $data = collect($list)->reduce(function($data,$list){
+                $data[] = \Redis::hGetAll($this->hash_key . $list);
+
+                return $data;
+            }, []);
+             //dd($data);
+            return $data;
+        }
+        $data = $this->server->$function($param);
+        //dd($data);
+        if (empty($data)) {
+            return false;
+        }
+        $hash_key = $this->hash_key;
+       // dd($data);
+        foreach ($data as $key => $value) {
+            $this->hash_key = $this->hash_key . $key;
+            $this->insert($value, $key);
+            $this->hash_key = $hash_key;
+        }
+        return $data;
+    }
+
+
     public function updateRedis($data)
     {
         return \Redis::hMset($this->hash_key, $data);
@@ -82,7 +121,7 @@ class RedisCommon
 
     public function deleteRedis($index)
     {
-        \Redis::lRem($this->list_key0,$index);
+        \Redis::lRem($this->list_key,$index);
         \Redis::hDel($this->hash_key);
     }
 

@@ -64,7 +64,8 @@
                                 </span>
                                 <span class="marl lin54 h6">例：/人，/次，/人/次</span>
                             </div>
-                            <li class="li cl mtv">
+                            <!-- 采购周期 -->
+                          <!--   <li class="li cl mtv">
                                 <span class="lef z h2" style="width: 170px;margin-right: 35px;display: inline-block;">采购数量及周期：</span>
                                 <div class="z rit ptm">
                                     <p class="input">
@@ -99,8 +100,9 @@
                                         <strong class="z h5">/次</strong>
                                     </span>
                                 </div>
-                            </li>
-                            <li class="li city cl">
+                            </li> -->
+                            <!-- 所在城市 -->
+                           <!--  <li class="li city cl">
                                     <span class="lef z h2">所在城市：</span>
                                     <div class="z rit">
                                         <div class="option_cont cl">
@@ -122,7 +124,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                            </li> -->
                             <div class="cont mtv cl">
                                 <em class="h2 lin54 z">商品参数：</em>
                                 <div class="origin_box z">
@@ -142,23 +144,7 @@
                                 <em class="h2 z">商品图片：</em>
                                 <div class="up-thumb-box z cont" id="picupload">
                                     <ul id="queue" class="cl" data-listidx="0">
-                                        <li style="display: none; cursor: pointer;"></li>
-                                     
-                                            <li class="up-thumb-item">
-                                            <img style="width:280px;height:210px" src="{{asset('s9/images/cont.png')}}" alt="">
-                                            <div class="thumb-oper" rel="{$vo['id']}" style="bottom: -80px;">
-                                               <!--  <a class="set cov" href="javascript:;">
-                                                    <i class="icon-pic-round"></i>
-                                                    <span class="">封面</span>
-                                                </a> -->
-                                                <a class="set del" href="javascript:;">
-                                                    <i class="icon-error-thin"></i>
-                                                    <span id="up_del" class="">删除</span>
-                                                </a>
-                                            </div>
-                                            </li>
-                                        
-                                     
+                                       <!--  <li style="display: none; cursor: pointer;"></li> -->
                                         <div class="up-thumb-add" id="pickfiles">
                                             <div class="upload-icon">
                                                 <input type="file" accept=".jpg,.png,.gif,.jpeg" class="upload-icon-file required" title="上传" name="project" multiple="multiple">
@@ -185,6 +171,7 @@
 </script>
 
 <!-- 实例化编辑器 -->
+<!-- 点击确定添加商品 -->
 <script type="text/javascript">
 //     var ue = UE.getEditor('container', {
 //     toolbars: [
@@ -222,12 +209,13 @@ $(function(){
                 var goodsuid = $('input[name="goodsuid"]').val();
                     // 计量单位
                 var unit = $('input[name="unit"]').val();
+                var name = $('input[name="name"]').val();
                 //采购数量及周期
-                var  shuliang = $('input[name="shuliang"]').val();
-                var  danwei = $('input[name="danwei"]').val();
-                var zhouqi =  $('input[name="zhouqi"]').val();
-                var province = $('input[name="province"]').val();
-                var city = $('input[name="city"]').val();
+                // var  shuliang = $('input[name="shuliang"]').val();
+                // var  danwei = $('input[name="danwei"]').val();
+                // var zhouqi =  $('input[name="zhouqi"]').val();
+                // var province = $('input[name="province"]').val();
+                // var city = $('input[name="city"]').val();
                 
               $.ajax({
                      type:'post',
@@ -235,20 +223,22 @@ $(function(){
                      url : '/goods',
                      data:{
                         goods_guid: goodsuid,
-                        name  : unit,
-                        shuliang: shuliang,
-                        danwei: danwei,
-                        zhouqi: zhouqi,
-                        province:province,
-                        city:city,
+                        name  : name,
+                        // shuliang: shuliang,
+                        // danwei: danwei,
+                        // zhouqi: zhouqi,
+                        // province:province,
+                        // city:city,
                         description:description,
                         unit:unit
                      },
                      dataType:'json',
-                     success:function(msg){
-                       alert(111);
-                       return false;
-                       
+                     success:function(r){
+                        globalTip({"msg":r.msg,
+                                   "setTime":5,
+                                   'URL':'/goodsuserparam/create?goodsuid={{ $goodsInfo['guid'] }}',
+                                    'jump':true,
+                                });
                      },
                      error:function(){
                         
@@ -282,7 +272,7 @@ $(function(){
     </div>
 
     <!-- 计量单位modal -->
-    <a id="jiliang" href="javascript:;"  class="link" target="_blank" data-target="#modal_jiliang">保密协议</a>
+    <a id="jiliang" href="javascript:;"  class="link" target="_blank" data-target="#modal_jiliang"></a>
     <div class="modal" id="modal_jiliang">
         <div class="modal_effect" style="">
             <div class="modal_main" style="width: 840px;padding:40px 20px;">
@@ -329,6 +319,7 @@ $(function(){
 <script type="text/javascript" src="{{asset('qiniu/scripts/main.js')}}"></script>
 <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
 
+<!-- 图片上传 -->
 <script>
 $(function(){
     jw_qiniu.init({
@@ -344,10 +335,8 @@ $(function(){
              var liId = file.id;
                 $('#'+liId).empty().append('<img style="width:280px;height:210px" src="'+"http://img.maixiangtong.com/"+file.target_name+'" alt="">'+
                     '<div class="thumb-oper" rel="" style="bottom: -80px;">'+
-                        '<a class="set cov" href="javascript:;">'+
-                            '<i class="icon-pic-round"></i>'+
-                            '<span class="">封面</span>'+
-                        '</a>'+
+                       
+                       
                         '<a class="set del js-img-del"' +'path="'+file.target_name+'" ' +' href="javascript:;">' +
                             '<i class="icon-error-thin"></i>'+
                             '<span  '+' class="">删除</span>'+
@@ -440,7 +429,7 @@ $(function(){
     <script src="{{asset('s9/js/modal.js')}}"></script>
 
 <!-- 城市选择 -->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   var qcitys = {};
     $('.procit').click(function(){
         var ob = $(this);
@@ -470,8 +459,8 @@ $(function(){
             $('.citylis').empty().html(qcitys[cy]);
         }
     });
-</script>
-<!--  添加参数-->
+</script> -->
+<!-- 为商品 添加删除参数-->
 <script type="text/javascript">
    
     $(document).on('click','#addEle',function(){
@@ -534,7 +523,7 @@ $(function(){
     })
     
 </script>
-
+<!-- 商品计量单位js-->
 <script type="text/javascript">
     
        //以下为计量单位js
@@ -562,7 +551,42 @@ $(function(){
        });
 
 </script>
+<script src="{{asset('s9/js/jquery-ui/jquery-ui.js')}}"></script>
+<!-- 商品图片排序-->
+<script>
+    $("#queue").sortable({update: function(event,ui){
+                                            console.log(event);
+                                            console.log(ui);
+                                         //拼JSON 数据，键表示广告ID,值表示顺序值；
+                                         //{id:sortnum,};
+                     var text="";
+                      $('#queue li').each(function(index,element){
+                        text = text + $(this).find('.thumb-oper').find('.js-img-del').attr("path")+':'+index+',';
+                      });
+                     
 
+                                      
+                        text=text.substring(0,text.length-1);
+                                          //text=text+'}'; 
+                                          //alert(text); 
+                                        
+                      $.ajax({
+                            type:'post',
+                            url:'/goodsimg/1',
+                            data:'_method=PUT&orderBy='+text,
+                            dataType:'json',
+                            success:function(msg){
+                              if(msg.state){
+                                    alert(msg.msg);
+                              }else{
+                                alert(msg.msg);
+                              }
+                            },
+                            error:function(){alert("操作失败！");}
+                            });
+                     } 
+        });
+</script>
 
 
 
